@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'django_filters',
-    'drf_yasg',
+    'drf_spectacular',
     'versatileimagefield',
     
     'game.apps.GameConfig',
@@ -70,8 +70,7 @@ ROOT_URLCONF = 'country_guess.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'game/templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates', BASE_DIR / 'game/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,7 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
@@ -211,7 +212,6 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
         'rest_framework.filters.OrderingFilter'
     ],
-    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
     'DEFAULT_PAGINATION_CLASS': 'api.v1.paginations.LargePageNumberPagination',
     'DEFAULT_THROTTLE_CLASSES': [
         'api.v1.throttling.AnonSustainedThrottle',
@@ -225,6 +225,14 @@ REST_FRAMEWORK = {
         'user_sustained': '5000/day',
         'user_burst': '100/minute',
     },
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Country Guess API',
+    'DESCRIPTION': 'Description placeholder2',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': True,
 }
 
 # Game settings
@@ -246,6 +254,7 @@ ORDER_REVEAL = env.list(
      'name')
 )
 NUMBER_TRIES = env.int('GAME_NUMBER_OF_TRIES', 4)
+GAME_STATE_OPTIONS = env.list('GAME_STATE_OPTIONS', ('success', 'fail', 'wait'))
 
 # REST countries API
 REST_COUNTRIES_ENDPOINT = env.str('REST_COUNTRIES_ENDPOINT', 'https://restcountries.com/v3.1/all')

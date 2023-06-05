@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-    <ul>
-        <li><a href="{% url 'schema-swagger-ui' %}">API</a></li>
-    </ul>
+    <div id="root"></div>
+
+    <script src="{% static 'index-test.js' %}"></script>
 {% endblock %}

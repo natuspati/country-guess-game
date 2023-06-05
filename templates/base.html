@@ -2,40 +2,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    {% block head_links %}
-    {% endblock %}
     <link rel="icon" href="{% static 'random_logo.png' %}"/>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
 
 </head>
 <body>
-<div class="min-vh-100 d-flex flex-column h-100">
-    <div class="container-fluid content-block justify-content-center bg-light flex-grow-1" id="content-div">
-        <div class="text-center">
-            {% block content %}
+{% block content %}
 
-                {% block messages %}
-                {% endblock %}
-
-            {% endblock %}
-
-            {% block content_extra %}
-            {% endblock %}
-
-            {% block extra_body %}
-            {% endblock %}
-        </div>
-    </div>
-
-</div>
-
-
+{% endblock %}
+<script>
+    // Timezone settings
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // e.g. "America/New_York"
+    const current_date = new Date().toISOString().split('T')[0];
+    document.cookie = "django_timezone=" + timezone;
+    document.cookie = "current_date=" + current_date;
+</script>
 </body>
 </html>
