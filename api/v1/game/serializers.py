@@ -38,12 +38,9 @@ class CountrySerializer(serializers.ModelSerializer):
         return data
 
 
-class CountryExistsSerializer(serializers.ModelSerializer):
+class CountryExistsSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=200)
     exists = serializers.BooleanField(default=False, required=False)
-    
-    class Meta:
-        model = Country
-        fields = ('name', 'exists')
 
 
 class GameSateSerializer(serializers.Serializer):

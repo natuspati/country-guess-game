@@ -47,12 +47,21 @@ class CountryExistsView(GenericAPIView):
         
         if country_serializer.is_valid():
             guessed_country_name = country_serializer.data['name']
-            queried_country = self.get_queryset().get(name__iexact=guessed_country_name.lower())
-            
-            response_country_serializer = CountryExistsSerializer({
-                'name': queried_country.name,
-                'exists': True if queried_country else False,
-            })
+            try:
+                queried_country = self.get_queryset().get(name__iexact=guessed_country_name.lower())
+            except Country.DoesNotExist:
+                queried_country = None
+
+            if queried_country:
+                response_country_serializer = CountryExistsSerializer({
+                    'name': queried_country.name,
+                    'exists': True,
+                })
+            else:
+                response_country_serializer = CountryExistsSerializer({
+                    'name': guessed_country_name,
+                    'exists': False,
+                })
             
             return Response(data=response_country_serializer.data, status=HTTP_200_OK)
         else:

@@ -1,4 +1,5 @@
 import React from 'react';
+import './custom.scss';
 import {CountryApp, GameApp} from "./App";
 
 import { createRoot } from 'react-dom/client';
