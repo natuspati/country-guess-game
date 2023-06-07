@@ -1,3 +1,73 @@
+$bgPrimary: #FBF9F9;
+$bgSecondary: #A58483;
+$bgTertiary: #A2A9B2;
+$textPrimary: #000000;
+$textSecondary: #22172A;
+$textTertiary: #807B9D;
 
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+@keyframes pop-in {
+     0% { opacity: 0; transform: scale(0.1); }
+     100% { opacity: 1; transform: scale(1); }
+}
+
+body {
+  background-color: $bgPrimary;
+}
+
+#gameDiv .custom-progress .progress-container {
+  background-color: $bgTertiary;
+  height: 20px;
+  width: 100%;
+  border-radius: 50px;
+}
+
+#gameDiv .custom-progress .progress-filler {
+  background-color: $bgSecondary;
+  height: 100%;
+  align-content: center;
+  border-radius: inherit;
+  transition: width 1s ease-in-out;
+}
+
+#gameDiv .custom-progress .progress-label {
+  color: $bgPrimary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-weight: bold;
+}
+
+#gameDiv #submit-button {
+  --bs-btn-bg: #{$bgSecondary};
+  --bs-btn-border-color: #{$bgSecondary};
+  --bs-btn-color: #{$bgPrimary};
+  --bs-btn-hover-bg: #{shade-color($bgSecondary, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($bgSecondary, 10%)};
+  --bs-btn-hover-color: #{$bgPrimary};
+  --bs-btn-disabled-bg: #{tint-color($bgSecondary, 10%)};;
+  --bs-btn-disabled-border-color: #{tint-color($bgSecondary, 10%)};
+  --bs-btn-disabled-color: #{$bgPrimary};
+}
+
+#gameDiv .alert {
+  animation: pop-in 0.5s;
+}
+
+#gameDiv .tried-countries .border {
+  background-color: #{tint-color($bgTertiary, 20%)};
+  color: #{shade-color($bgSecondary, 50%)};
+  border-radius: 20px;
+  font-weight: bold;
+  animation: pop-in 0.5s;
+}
 
 @import '~bootstrap/scss/bootstrap.scss';
