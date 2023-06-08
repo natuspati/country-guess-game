@@ -4,12 +4,10 @@ apis/UsersApi.ts
 apis/index.ts
 index.ts
 models/Country.ts
-models/CountryExists.ts
 models/GameSate.ts
 models/GameStateEnum.ts
 models/PaginatedCountryList.ts
 models/PatchedCountry.ts
-models/RegionEnum.ts
 models/TokenObtainPair.ts
 models/TokenRefresh.ts
 models/TokenVerify.ts

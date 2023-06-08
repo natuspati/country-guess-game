@@ -13,13 +13,6 @@
  */
 
 import { exists, mapValues } from '../runtime';
-import type { RegionEnum } from './RegionEnum';
-import {
-    RegionEnumFromJSON,
-    RegionEnumFromJSONTyped,
-    RegionEnumToJSON,
-} from './RegionEnum';
-
 /**
  * 
  * @export
@@ -46,10 +39,10 @@ export interface Country {
     capital: string;
     /**
      * 
-     * @type {RegionEnum}
+     * @type {string}
      * @memberof Country
      */
-    region: RegionEnum;
+    region: string;
     /**
      * 
      * @type {number}
@@ -104,7 +97,7 @@ export function CountryFromJSONTyped(json: any, ignoreDiscriminator: boolean): C
         'slug': !exists(json, 'slug') ? undefined : json['slug'],
         'name': json['name'],
         'capital': json['capital'],
-        'region': RegionEnumFromJSON(json['region']),
+        'region': json['region'],
         'population': json['population'],
         'flag': json['flag'],
         'modifiedAt': (new Date(json['modified_at'])),
@@ -124,7 +117,7 @@ export function CountryToJSON(value?: Country | null): any {
         'slug': value.slug,
         'name': value.name,
         'capital': value.capital,
-        'region': RegionEnumToJSON(value.region),
+        'region': value.region,
         'population': value.population,
         'flag': value.flag,
         'used_at': value.usedAt === undefined ? undefined : (value.usedAt === null ? null : value.usedAt.toISOString().substr(0,10)),

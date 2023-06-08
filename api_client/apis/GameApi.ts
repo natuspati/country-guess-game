@@ -16,7 +16,6 @@
 import * as runtime from '../runtime';
 import type {
   Country,
-  CountryExists,
   GameSate,
   PaginatedCountryList,
   PatchedCountry,
@@ -24,8 +23,6 @@ import type {
 import {
     CountryFromJSON,
     CountryToJSON,
-    CountryExistsFromJSON,
-    CountryExistsToJSON,
     GameSateFromJSON,
     GameSateToJSON,
     PaginatedCountryListFromJSON,
@@ -33,10 +30,6 @@ import {
     PatchedCountryFromJSON,
     PatchedCountryToJSON,
 } from '../models';
-
-export interface GameCountryCheckCreateRequest {
-    countryExists: CountryExists;
-}
 
 export interface GameCountryCreateRequest {
     country: Country;
@@ -76,52 +69,6 @@ export interface GameStateCreateRequest {
  * 
  */
 export class GameApi extends runtime.BaseAPI {
-
-    /**
-     */
-    async gameCountryCheckCreateRaw(requestParameters: GameCountryCheckCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<CountryExists>> {
-        if (requestParameters.countryExists === null || requestParameters.countryExists === undefined) {
-            throw new runtime.RequiredError('countryExists','Required parameter requestParameters.countryExists was null or undefined when calling gameCountryCheckCreate.');
-        }
-
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        headerParameters['Content-Type'] = 'application/json';
-
-        if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
-            headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
-        }
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // tokenAuth authentication
-        }
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("jwtAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-        const response = await this.request({
-            path: `/api/v1/game/country/check/`,
-            method: 'POST',
-            headers: headerParameters,
-            query: queryParameters,
-            body: CountryExistsToJSON(requestParameters.countryExists),
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => CountryExistsFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async gameCountryCheckCreate(requestParameters: GameCountryCheckCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<CountryExists> {
-        const response = await this.gameCountryCheckCreateRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
 
     /**
      */

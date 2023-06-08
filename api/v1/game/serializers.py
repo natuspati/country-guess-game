@@ -9,6 +9,7 @@ from game.models import Country
 
 class CountrySerializer(serializers.ModelSerializer):
     slug = serializers.CharField(required=False)
+    region = serializers.CharField(source='get_region_display')
     flag = VersatileImageFieldSerializer(
         sizes=[
             ('full_size', 'url'),
@@ -36,11 +37,6 @@ class CountrySerializer(serializers.ModelSerializer):
         if not data.get('slug') and data.get('name'):
             data['slug'] = slugify(data['name'])
         return data
-
-
-class CountryExistsSerializer(serializers.Serializer):
-    name = serializers.CharField(max_length=200)
-    exists = serializers.BooleanField(default=False, required=False)
 
 
 class GameSateSerializer(serializers.Serializer):
