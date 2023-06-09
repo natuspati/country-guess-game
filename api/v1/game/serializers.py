@@ -4,7 +4,7 @@ from django.conf import settings
 from rest_framework import serializers
 from versatileimagefield.serializers import VersatileImageFieldSerializer
 
-from game.models import Country
+from game.models import Country, UserStats
 
 
 class CountrySerializer(serializers.ModelSerializer):
@@ -39,7 +39,12 @@ class CountrySerializer(serializers.ModelSerializer):
         return data
 
 
-class GameSateSerializer(serializers.Serializer):
-    finished_today = serializers.BooleanField()
-    game_state = serializers.ChoiceField(settings.GAME_STATE_OPTIONS, allow_blank=False)
-    number_tries = serializers.IntegerField(default=settings.NUMBER_TRIES)
+class UserStatsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserStats
+        fields = (
+            'score',
+            'last_played',
+            'last_game_state',
+            'last_number_tries',
+        )

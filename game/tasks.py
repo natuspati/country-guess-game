@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.conf import settings
 from django.core.files import File
 from django.core.files.temp import NamedTemporaryFile
+from django.core import management
 
 import requests
 from urllib.request import urlopen, Request
@@ -75,3 +76,7 @@ def update_country_model():
     
     # Set dates to to_be_used_at date.
     reset_countries_dates()
+
+
+def clear_sessions():
+    management.call_command("clearsessions", verbosity=0)

@@ -95,6 +95,8 @@ DATABASES = {
     }
 }
 
+SESSION_COOKIE_AGE = 2 * 24 * 60 * 60  # 2 days
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -256,7 +258,15 @@ ORDER_REVEAL = env.list(
      'name')
 )
 NUMBER_TRIES = env.int('GAME_NUMBER_OF_TRIES', 4)
-GAME_STATE_OPTIONS = env.list('GAME_STATE_OPTIONS', ('success', 'fail', 'wait'))
+GAME_STATE_OPTIONS_DICT = env.dict(
+    'GAME_STATE_OPTIONS',
+    subcast_keys=str,
+    subcast_values=str,
+)
+GAME_STATE_OPTIONS = []
+for game_state in GAME_STATE_OPTIONS_DICT.items():
+    GAME_STATE_OPTIONS.append(game_state)
+DEFAULT_GAME_STATE_OPTION = env.str('GAME_STATE_DEFAULT_OPTION', 'wait')
 
 # REST countries API
 REST_COUNTRIES_ENDPOINT = env.str('REST_COUNTRIES_ENDPOINT', 'https://restcountries.com/v3.1/all')

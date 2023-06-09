@@ -1,16 +1,22 @@
+from datetime import datetime
+from importlib import import_module
+
 import django.core.exceptions
+from django.contrib.sessions.models import Session
 from django.conf import settings
 
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import GenericAPIView
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST, HTTP_201_CREATED
 
-from game.models import Country
-from api.v1.game.serializers import CountrySerializer, GameSateSerializer
+from game.models import Country, UserStats
+from api.v1.game.serializers import CountrySerializer, UserStatsSerializer
 from api.v1.game.utils import select_random_country
 from api.v1.game.exceptions import NoCurrentDateCookieException
+
+SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
 
 
 class CountryViewSet(ModelViewSet):
@@ -38,25 +44,73 @@ class CountryViewSet(ModelViewSet):
         return Response(country_serializer.data, status=HTTP_200_OK)
 
 
-class GameStateView(GenericAPIView):
-    serializer_class = GameSateSerializer
-    allowed_methods = ['GET', 'POST']
+class UserStatsView(GenericAPIView):
+    serializer_class = UserStatsSerializer
+    queryset = UserStats.objects.all()
+    allowed_methods = ['GET', 'PUT']
     
     def get(self, request, *args, **kwargs):
-        # TODO: rewrite game state logic using Django Session framework
-        game_state = {
-            'finished_today': False,
-            'game_state': 'wait',
-            'number_tries': settings.NUMBER_TRIES,
-        }
+        current_session = self.get_current_session()
         
-        game_state_serializer = self.get_serializer(game_state)
+        user_stats, created = self.get_queryset().get_or_create(
+            session=current_session,
+        )
+        
+        # Try to obtain current date in user's timezone ...
+        if not created:
+            # using query parameters
+            if self.request.query_params.get('current_date'):
+                current_date = self.request.query_params.get('current_date')
+            # using cookies
+            elif 'current_date' in self.request.COOKIES:
+                current_date = self.request.COOKIES['current_date']
+            # Set the server time if query parameters and cookies fail
+            else:
+                current_date = datetime.today()
+            
+            if type(current_date) is str:
+                current_date = datetime.strptime(current_date, '%Y-%m-%d').date()
+            
+            # Reset the game state if the current date s different from the last played date
+            if user_stats.last_played != current_date:
+                print(user_stats.last_played)
+                print(current_date)
+                user_stats.last_game_state = settings.DEFAULT_GAME_STATE_OPTION
+                user_stats.save()
+        
+        game_state_serializer = self.get_serializer(user_stats)
+        
         return Response(game_state_serializer.data)
     
-    def post(self, request, *args, **kwargs):
-        game_state_serializer = self.get_serializer(data=request.data)
-        if game_state_serializer.is_valid():
-            # Integrate Session framework here
-            return Response(data=game_state_serializer.data, status=HTTP_200_OK)
+    def put(self, request, *args, **kwargs):
+        current_session = self.get_current_session()
+        user_stats_serializer = self.get_serializer(data=request.data)
+        
+        if user_stats_serializer.is_valid():
+            validated_user_stats = user_stats_serializer.data
+            
+            user_stats, created = self.get_queryset().update_or_create(
+                session=current_session,
+                defaults=validated_user_stats
+            )
+            
+            if created:
+                return Response(data=validated_user_stats, status=HTTP_201_CREATED)
+            else:
+                return Response(data=validated_user_stats, status=HTTP_200_OK)
+        
         else:
             return Response(data='Game state data is invalid.', status=HTTP_400_BAD_REQUEST)
+    
+    def get_current_session(self):
+        if self.request.session.session_key is None:
+            new_session = SessionStore()
+            new_session.create()
+            
+            return Session.objects.get(
+                session_key=new_session.session_key,
+            )
+        else:
+            return Session.objects.get(
+                session_key=self.request.session.session_key,
+            )

@@ -16,19 +16,19 @@
 import * as runtime from '../runtime';
 import type {
   Country,
-  GameSate,
   PaginatedCountryList,
   PatchedCountry,
+  UserStats,
 } from '../models';
 import {
     CountryFromJSON,
     CountryToJSON,
-    GameSateFromJSON,
-    GameSateToJSON,
     PaginatedCountryListFromJSON,
     PaginatedCountryListToJSON,
     PatchedCountryFromJSON,
     PatchedCountryToJSON,
+    UserStatsFromJSON,
+    UserStatsToJSON,
 } from '../models';
 
 export interface GameCountryCreateRequest {
@@ -61,8 +61,8 @@ export interface GameCountryUpdateRequest {
     country: Country;
 }
 
-export interface GameStateCreateRequest {
-    gameSate: GameSate;
+export interface GameStatsUpdateRequest {
+    userStats?: UserStats;
 }
 
 /**
@@ -397,11 +397,46 @@ export class GameApi extends runtime.BaseAPI {
 
     /**
      */
-    async gameStateCreateRaw(requestParameters: GameStateCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GameSate>> {
-        if (requestParameters.gameSate === null || requestParameters.gameSate === undefined) {
-            throw new runtime.RequiredError('gameSate','Required parameter requestParameters.gameSate was null or undefined when calling gameStateCreate.');
+    async gameStatsRetrieveRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserStats>> {
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
+            headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
+        }
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // tokenAuth authentication
         }
 
+        if (this.configuration && this.configuration.accessToken) {
+            const token = this.configuration.accessToken;
+            const tokenString = await token("jwtAuth", []);
+
+            if (tokenString) {
+                headerParameters["Authorization"] = `Bearer ${tokenString}`;
+            }
+        }
+        const response = await this.request({
+            path: `/api/v1/game/stats/`,
+            method: 'GET',
+            headers: headerParameters,
+            query: queryParameters,
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse(response, (jsonValue) => UserStatsFromJSON(jsonValue));
+    }
+
+    /**
+     */
+    async gameStatsRetrieve(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserStats> {
+        const response = await this.gameStatsRetrieveRaw(initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async gameStatsUpdateRaw(requestParameters: GameStatsUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<UserStats>> {
         const queryParameters: any = {};
 
         const headerParameters: runtime.HTTPHeaders = {};
@@ -424,59 +459,20 @@ export class GameApi extends runtime.BaseAPI {
             }
         }
         const response = await this.request({
-            path: `/api/v1/game/state/`,
-            method: 'POST',
+            path: `/api/v1/game/stats/`,
+            method: 'PUT',
             headers: headerParameters,
             query: queryParameters,
-            body: GameSateToJSON(requestParameters.gameSate),
+            body: UserStatsToJSON(requestParameters.userStats),
         }, initOverrides);
 
-        return new runtime.JSONApiResponse(response, (jsonValue) => GameSateFromJSON(jsonValue));
+        return new runtime.JSONApiResponse(response, (jsonValue) => UserStatsFromJSON(jsonValue));
     }
 
     /**
      */
-    async gameStateCreate(requestParameters: GameStateCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GameSate> {
-        const response = await this.gameStateCreateRaw(requestParameters, initOverrides);
-        return await response.value();
-    }
-
-    /**
-     */
-    async gameStateRetrieveRaw(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<GameSate>> {
-        const queryParameters: any = {};
-
-        const headerParameters: runtime.HTTPHeaders = {};
-
-        if (this.configuration && (this.configuration.username !== undefined || this.configuration.password !== undefined)) {
-            headerParameters["Authorization"] = "Basic " + btoa(this.configuration.username + ":" + this.configuration.password);
-        }
-        if (this.configuration && this.configuration.apiKey) {
-            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // tokenAuth authentication
-        }
-
-        if (this.configuration && this.configuration.accessToken) {
-            const token = this.configuration.accessToken;
-            const tokenString = await token("jwtAuth", []);
-
-            if (tokenString) {
-                headerParameters["Authorization"] = `Bearer ${tokenString}`;
-            }
-        }
-        const response = await this.request({
-            path: `/api/v1/game/state/`,
-            method: 'GET',
-            headers: headerParameters,
-            query: queryParameters,
-        }, initOverrides);
-
-        return new runtime.JSONApiResponse(response, (jsonValue) => GameSateFromJSON(jsonValue));
-    }
-
-    /**
-     */
-    async gameStateRetrieve(initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<GameSate> {
-        const response = await this.gameStateRetrieveRaw(initOverrides);
+    async gameStatsUpdate(requestParameters: GameStatsUpdateRequest = {}, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<UserStats> {
+        const response = await this.gameStatsUpdateRaw(requestParameters, initOverrides);
         return await response.value();
     }
 
