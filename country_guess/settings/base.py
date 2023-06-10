@@ -95,7 +95,9 @@ DATABASES = {
     }
 }
 
+# Session settings
 SESSION_COOKIE_AGE = 2 * 24 * 60 * 60  # 2 days
+# SESSION_SAVE_EVERY_REQUEST = True
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -203,7 +205,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication'
     ],
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.AllowAny',
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
@@ -224,7 +226,7 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_THROTTLE_RATES': {
         'anon_sustained': '500/day',
-        'anon_burst': '10/minute',
+        'anon_burst': '100/minute',
         'user_sustained': '5000/day',
         'user_burst': '100/minute',
     },

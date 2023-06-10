@@ -73,13 +73,10 @@ class UserStatsView(GenericAPIView):
             
             # Reset the game state if the current date s different from the last played date
             if user_stats.last_played != current_date:
-                print(user_stats.last_played)
-                print(current_date)
                 user_stats.last_game_state = settings.DEFAULT_GAME_STATE_OPTION
                 user_stats.save()
         
         game_state_serializer = self.get_serializer(user_stats)
-        
         return Response(game_state_serializer.data)
     
     def put(self, request, *args, **kwargs):
@@ -103,14 +100,14 @@ class UserStatsView(GenericAPIView):
             return Response(data='Game state data is invalid.', status=HTTP_400_BAD_REQUEST)
     
     def get_current_session(self):
-        if self.request.session.session_key is None:
+        if self.request.session.get('anon_id') is None:
             new_session = SessionStore()
             new_session.create()
-            
+            self.request.session['anon_id'] = new_session.session_key
             return Session.objects.get(
                 session_key=new_session.session_key,
             )
         else:
             return Session.objects.get(
-                session_key=self.request.session.session_key,
+                session_key=self.request.session.get('anon_id'),
             )
