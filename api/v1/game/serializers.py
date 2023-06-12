@@ -1,5 +1,4 @@
 from django.utils.text import slugify
-from django.conf import settings
 
 from rest_framework import serializers
 from versatileimagefield.serializers import VersatileImageFieldSerializer
@@ -7,8 +6,7 @@ from versatileimagefield.serializers import VersatileImageFieldSerializer
 from game.models import Country, UserStats
 
 
-class CountrySerializer(serializers.ModelSerializer):
-    slug = serializers.CharField(required=False)
+class CountryDetailSerializer(serializers.ModelSerializer):
     region = serializers.CharField(source='get_region_display')
     flag = VersatileImageFieldSerializer(
         sizes=[
@@ -20,7 +18,6 @@ class CountrySerializer(serializers.ModelSerializer):
     class Meta:
         model = Country
         fields = (
-            'slug',
             'name',
             'capital',
             'region',
@@ -31,12 +28,19 @@ class CountrySerializer(serializers.ModelSerializer):
         )
         
         readonly = 'used_at'
+
+
+class CountrySerializer(CountryDetailSerializer):
+    url = serializers.HyperlinkedIdentityField(view_name='country-detail', lookup_field='slug', read_only=True)
     
-    # Object-level validation in case slug is not provided.
-    def validate(self, data):
-        if not data.get('slug') and data.get('name'):
-            data['slug'] = slugify(data['name'])
-        return data
+    class Meta(CountryDetailSerializer.Meta):
+        fields = CountryDetailSerializer.Meta.fields + ('url',)
+    
+    # # Object-level validation in case slug is not provided.
+    # def validate(self, data):
+    #     if not data.get('slug') and data.get('name'):
+    #         data['slug'] = slugify(data['name'])
+    #     return data
 
 
 class UserStatsSerializer(serializers.ModelSerializer):

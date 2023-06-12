@@ -12,7 +12,8 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST, HTTP_201_CREATED
 
 from game.models import Country, UserStats
-from api.v1.game.serializers import CountrySerializer, UserStatsSerializer
+from api.v1.permissions import IsAdminOrReadOnly
+from api.v1.game.serializers import CountrySerializer, CountryDetailSerializer, UserStatsSerializer
 from api.v1.game.utils import select_random_country
 from api.v1.game.exceptions import NoCurrentDateCookieException
 
@@ -20,12 +21,18 @@ SessionStore = import_module(settings.SESSION_ENGINE).SessionStore
 
 
 class CountryViewSet(ModelViewSet):
+    permission_classes = [IsAdminOrReadOnly]
     queryset = Country.objects.all()
     serializer_class = CountrySerializer
     lookup_field = 'slug'
     search_fields = ['^name']
     filterset_fields = ['region']
     ordering_fields = ['name', 'population']
+    
+    def get_serializer_class(self):
+        if self.action in ['retrieve', 'put', 'patch', 'delete']:
+            return CountryDetailSerializer
+        return super().get_serializer_class()
     
     @action(methods=['get'], detail=False, name='Country of the day')
     def today(self, request):
@@ -55,7 +62,7 @@ class UserStatsView(GenericAPIView):
         user_stats, created = self.get_queryset().get_or_create(
             session=current_session,
         )
-        
+
         # Try to obtain current date in user's timezone ...
         if not created:
             # using query parameters
