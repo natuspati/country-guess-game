@@ -34,6 +34,9 @@ class CountryViewSet(ModelViewSet):
             return CountryDetailSerializer
         return super().get_serializer_class()
     
+    def create(self, request, *args, **kwargs):
+        return super().create(request, *args, **kwargs)
+    
     @action(methods=['get'], detail=False, name='Country of the day')
     def today(self, request):
         current_date = request.COOKIES.get('current_date')
@@ -74,13 +77,14 @@ class UserStatsView(GenericAPIView):
             # Set the server time if query parameters and cookies fail
             else:
                 current_date = datetime.today()
-            
+                
             if type(current_date) is str:
                 current_date = datetime.strptime(current_date, '%Y-%m-%d').date()
-            
+
             # Reset the game state if the current date s different from the last played date
             if user_stats.last_played != current_date:
                 user_stats.last_game_state = settings.DEFAULT_GAME_STATE_OPTION
+                user_stats.last_number_tries = settings.NUMBER_TRIES
                 user_stats.save()
         
         game_state_serializer = self.get_serializer(user_stats)

@@ -7,7 +7,7 @@ from game.models import Country, UserStats
 
 
 class CountryDetailSerializer(serializers.ModelSerializer):
-    region = serializers.CharField(source='get_region_display')
+    # region = serializers.CharField(source='get_region_display')
     flag = VersatileImageFieldSerializer(
         sizes=[
             ('full_size', 'url'),
@@ -28,7 +28,7 @@ class CountryDetailSerializer(serializers.ModelSerializer):
         )
         
         readonly = 'used_at'
-
+    
 
 class CountrySerializer(CountryDetailSerializer):
     url = serializers.HyperlinkedIdentityField(view_name='country-detail', lookup_field='slug', read_only=True)

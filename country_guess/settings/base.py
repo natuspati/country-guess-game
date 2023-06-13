@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django_filters',
     'drf_spectacular',
     'versatileimagefield',
+    # 'factory_generator',
     
     'game.apps.GameConfig',
 ]
