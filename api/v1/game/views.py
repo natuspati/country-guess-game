@@ -4,6 +4,9 @@ from importlib import import_module
 import django.core.exceptions
 from django.contrib.sessions.models import Session
 from django.conf import settings
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie, vary_on_headers
 
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.generics import GenericAPIView
@@ -34,22 +37,29 @@ class CountryViewSet(ModelViewSet):
             return CountryDetailSerializer
         return super().get_serializer_class()
     
-    def create(self, request, *args, **kwargs):
-        return super().create(request, *args, **kwargs)
+    @method_decorator(cache_page(60*60*24*14))  # 2 weeks
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
     
+    @method_decorator(cache_page(60 * 60 * 24 * 14))  # 2 weeks
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
+    
+    @method_decorator(cache_page(60*60))  # 1 hour
+    @method_decorator(vary_on_cookie)
     @action(methods=['get'], detail=False, name='Country of the day')
     def today(self, request):
         current_date = request.COOKIES.get('current_date')
         # If current date is not set in cookies or badly formatted, select a random country.
         try:
             if current_date:
-                country_today = self.get_queryset().filter(used_at=current_date)
+                country_today = self.get_queryset().get(used_at=current_date)
             else:
                 raise NoCurrentDateCookieException
-        except (django.core.exceptions.ValidationError, NoCurrentDateCookieException):
+        except (django.core.exceptions.ValidationError, NoCurrentDateCookieException, Country.DoesNotExist):
             country_today = select_random_country()
         
-        country_serializer = CountrySerializer(country_today.get(), context={'request': request})
+        country_serializer = CountrySerializer(country_today, context={'request': request})
         
         return Response(country_serializer.data, status=HTTP_200_OK)
 

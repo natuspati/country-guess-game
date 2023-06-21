@@ -79,4 +79,5 @@ def update_country_model():
 
 
 def clear_sessions():
+    logger.info('Sessions clearance has been initiated.')
     management.call_command("clearsessions", verbosity=0)
