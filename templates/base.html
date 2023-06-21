@@ -20,7 +20,7 @@
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // e.g. "America/New_York"
     const current_date = new Date().toISOString().split('T')[0];
     document.cookie = "django_timezone=" + timezone;
-    document.cookie = "current_date=" + current_date.toISOString().split('T')[0];
+    document.cookie = "current_date=" + current_date;
 </script>
 
 </body>

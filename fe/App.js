@@ -15,8 +15,8 @@ const GameApp = function (props) {
     const [gameState, setGameState] = useState("wait");
     const [numTries, setNumTries] = useState(maxTries);
     const [triedCountries, setTriedCountries] = useState([]);
-    const [guess, setGuess] = useState("");
     const [score, setScore] = useState(0);
+    const [input, setInput] = useState("");
 
     // UI state variables
     const [showAlert, setShowAlert] = useState([false, ""]);
@@ -53,6 +53,19 @@ const GameApp = function (props) {
                 flag: result.flag
             });
         });
+
+        // for debug purposes
+        // client.gameCountryList().then((result) => {
+        //     let searchResults = [];
+        //     for (const countryOption of result.results) {
+        //         searchResults.push({
+        //             label: countryOption["name"],
+        //             value: countryOption["name"]
+        //         });
+        //     }
+        //     setCountryOptions(searchResults);
+        //     console.log(result.results);
+        // });
     }, []);
 
     // Update user stats
@@ -115,13 +128,12 @@ const GameApp = function (props) {
 
     const onSubmit = (inputData) => {
         const newGuess = inputData["value"];
-        setGuess(newGuess)
 
         if (triedCountries.includes(newGuess)) {
             setGameState("repeat");
         } else {
             let localNumTries = numTries;
-            let localGameState = gameState;
+            let localGameState;
             let localScore = score;
 
             if (newGuess === country.name) {
@@ -146,6 +158,8 @@ const GameApp = function (props) {
                 numTries: localNumTries
             });
         }
+
+        setShowAlert([true, country.name]);
     }
 
     const alertFormatter = (responseGameState) => {
@@ -166,6 +180,7 @@ const GameApp = function (props) {
             default:
                 out = ["primary", "Debug message"]
         }
+
         return out
     };
 
@@ -185,11 +200,18 @@ const GameApp = function (props) {
                             options={countryOptions}
                             placeholder="Select country"
                             value={selectedCountryOption}
+                            inputValue={input}
                             isSearchable={true}
-                            onInputChange={onSearchChange}
+                            onInputChange={(value, action) => {
+                                if (action.action === "input-change") {
+                                    onSearchChange(value);
+                                    setInput(value);
+                                }
+                            }}
                             onChange={onSubmit}
                             isDisabled={inputDisabled}
                             autoFocus={true}
+                            // menuIsOpen={true} // Enable to debug
                             ref={inputRef}
                         />
                     </div>
