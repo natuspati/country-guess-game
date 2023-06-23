@@ -1,4 +1,10 @@
 .venv
 .git
 .gitignore
+# Front end pipeline
 fe/
+webpack.config.js
+tsconfig.json
+schema.yml
+package-lock.json
+package.json

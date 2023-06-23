@@ -24,8 +24,8 @@ def reset_countries_dates():
     
     # Fill out the used at dates for each country in random order
     for country in country_set:
-        today += timedelta(days=1)
         country.used_at = today
+        today += timedelta(days=1)
         country.save()
 
 
@@ -81,3 +81,4 @@ def update_country_model():
 def clear_sessions():
     logger.info('Sessions clearance has been initiated.')
     management.call_command("clearsessions", verbosity=0)
+    
