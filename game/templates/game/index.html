@@ -2,6 +2,9 @@
 {% load static %}
 {% block content %}
     <div id="root"></div>
-
-    <script src="{% static 'index-test.js' %}"></script>
+     {% if DEBUG %}
+        <script src="{% static 'dev.js' %}"></script>
+     {% else %}
+         <script src="{% static 'prod.js' %}"></script>
+     {% endif %}
 {% endblock %}

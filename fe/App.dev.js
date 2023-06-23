@@ -29,7 +29,7 @@ const GameApp = function (props) {
 
 
     const client = new GameApi(new Configuration({
-        basePath: 'http://0.0.0.0',
+        basePath: 'http://0.0.0.0:8000',
         headers: {'X-CSRFToken': Cookies.get('csrftoken')}
     }));
 

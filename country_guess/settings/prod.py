@@ -1,8 +1,14 @@
 from country_guess.settings.base import *
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DJANGO_DEBUG', False)
+prod_env = Env()
+prod_env.read_env('.env.prod')
 
-DATABASES = {'default': env.dj_db_url('DATABASE_URL', 'sqlite:///db.sqlite3')}
+DEBUG = False
 
-CACHES = {'default': env.dj_cache_url('CACHE_URL')}
+SECRET_KEY = prod_env.str('DJANGO_SECRET_KEY')
+
+ALLOWED_HOSTS = prod_env.list('DJANGO_ALLOWED_HOSTS')
+
+DATABASES = {'default': prod_env.dj_db_url('DATABASE_URL')}
+
+CACHES = {'default': prod_env.dj_cache_url('CACHE_URL')}

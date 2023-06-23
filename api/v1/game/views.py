@@ -45,6 +45,7 @@ class CountryViewSet(ModelViewSet):
     def retrieve(self, request, *args, **kwargs):
         return super().retrieve(request, *args, **kwargs)
     
+    # TODO: Allow accessing the view with .json format
     @method_decorator(cache_page(60*60))  # 1 hour
     @method_decorator(vary_on_cookie)
     @action(methods=['get'], detail=False, name='Country of the day')

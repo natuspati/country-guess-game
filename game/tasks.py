@@ -40,7 +40,7 @@ def update_country_model():
     # Update data for each country.
     for i, country_dict in enumerate(resp.json()):
         if country_dict.get('independent') is True:
-            time.sleep(1)
+            time.sleep(0.5)
             
             try:
                 flag_url = country_dict['flags']['png']
