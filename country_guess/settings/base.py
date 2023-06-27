@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'drf_spectacular',
+    'drf_spectacular_sidecar',
     'versatileimagefield',
     
     'game.apps.GameConfig',
@@ -101,48 +102,77 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+# TODO: make Django logging work with Gunicorn and Nginx
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'filters': {
+#         'require_debug_false': {
+#             '()': 'django.utils.log.RequireDebugFalse',
+#         },
+#     },
+#     'formatters': {
+#         'simple': {
+#             'format': '{levelname} {message}',
+#             'style': '{',
+#         },
+#         'verbose': {
+#             'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+#             'style': '{',
+#         },
+#     },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'stream': 'ext://sys.stdout',
+#             'formatter': 'simple',
+#         },
+#         'mail_admins': {
+#             'level': 'ERROR',
+#             'class': 'django.utils.log.AdminEmailHandler',
+#             'filters': ['require_debug_false'],
+#             'formatter': 'verbose',
+#         },
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'filename': BASE_DIR / 'logs/debug.log',
+#             'formatter': 'verbose'
+#         },
+#     },
+#     'loggers': {
+#         'game': {
+#             'handlers': ['console', 'file'],
+#             'level': 'DEBUG',
+#             'propagate': True
+#         },
+#     },
+# }
+
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{levelname} {asctime} {module} {process:d} {thread:d} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
         },
     },
-    'formatters': {
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
+    "handlers": {
+        "file": {
+            "level": "DEBUG",
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "logs/debug.log",
         },
     },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'stream': 'ext://sys.stdout',
-            'formatter': 'simple',
-        },
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'filters': ['require_debug_false'],
-            'formatter': 'verbose',
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'logs/debug.log',
-            'formatter': 'verbose'
-        },
-    },
-    'loggers': {
-        'game': {
-            'handlers': ['console', 'file'],
-            'level': 'DEBUG',
-            'propagate': True
+    "loggers": {
+        "django": {
+            "handlers": ["file"],
+            "propagate": True,
         },
     },
 }
@@ -186,8 +216,11 @@ REST_FRAMEWORK = {
 }
 
 SPECTACULAR_SETTINGS = {
+    'SWAGGER_UI_DIST': 'SIDECAR',
+    'SWAGGER_UI_FAVICON_HREF': 'SIDECAR',
+    'REDOC_DIST': 'SIDECAR',
     'TITLE': 'Country Guess API',
-    'DESCRIPTION': 'Description placeholder2',
+    'DESCRIPTION': 'Description placeholder',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': True,
 }

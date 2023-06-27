@@ -3,7 +3,7 @@ from country_guess.settings.base import *
 prod_env = Env()
 prod_env.read_env('.env.prod')
 
-DEBUG = False
+DEBUG = prod_env.str('DJANGO_DEBUG', False)
 
 SECRET_KEY = prod_env.str('DJANGO_SECRET_KEY')
 
@@ -30,8 +30,7 @@ CACHES = {
     }
 }
 
-# Performance considerations
-SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 # TODO: add SSL certification and prepare for deployment
 # Security considerations

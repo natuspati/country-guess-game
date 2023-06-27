@@ -37,7 +37,7 @@ class CountryViewSet(ModelViewSet):
             return CountryDetailSerializer
         return super().get_serializer_class()
     
-    @method_decorator(cache_page(60*60*24*14))  # 2 weeks
+    @method_decorator(cache_page(60 * 60 * 24 * 14))  # 2 weeks
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
     
@@ -46,7 +46,7 @@ class CountryViewSet(ModelViewSet):
         return super().retrieve(request, *args, **kwargs)
     
     # TODO: Allow accessing the view with .json format
-    @method_decorator(cache_page(60*60))  # 1 hour
+    @method_decorator(cache_page(60 * 60))  # 1 hour
     @method_decorator(vary_on_cookie)
     @action(methods=['get'], detail=False, name='Country of the day')
     def today(self, request):
@@ -71,12 +71,12 @@ class UserStatsView(GenericAPIView):
     allowed_methods = ['GET', 'PUT']
     
     def get(self, request, *args, **kwargs):
-        current_session = self.get_current_session()
+        current_session_id = self.get_current_session_id()
         
         user_stats, created = self.get_queryset().get_or_create(
-            session=current_session,
+            session_id=current_session_id
         )
-
+        
         # Try to obtain current date in user's timezone ...
         if not created:
             # using query parameters
@@ -88,10 +88,10 @@ class UserStatsView(GenericAPIView):
             # Set the server time if query parameters and cookies fail
             else:
                 current_date = datetime.today()
-                
+            
             if type(current_date) is str:
                 current_date = datetime.strptime(current_date, '%Y-%m-%d').date()
-
+            
             # Reset the game state if the current date s different from the last played date
             if user_stats.last_played != current_date:
                 user_stats.last_game_state = settings.DEFAULT_GAME_STATE_OPTION
@@ -102,14 +102,14 @@ class UserStatsView(GenericAPIView):
         return Response(game_state_serializer.data)
     
     def put(self, request, *args, **kwargs):
-        current_session = self.get_current_session()
+        current_session_id = self.get_current_session_id()
         user_stats_serializer = self.get_serializer(data=request.data)
         
         if user_stats_serializer.is_valid():
             validated_user_stats = user_stats_serializer.data
             
             user_stats, created = self.get_queryset().update_or_create(
-                session=current_session,
+                session_id=current_session_id,
                 defaults=validated_user_stats
             )
             
@@ -121,15 +121,12 @@ class UserStatsView(GenericAPIView):
         else:
             return Response(data='Game state data is invalid.', status=HTTP_400_BAD_REQUEST)
     
-    def get_current_session(self):
+    def get_current_session_id(self):
         if self.request.session.get('anon_id') is None:
             new_session = SessionStore()
             new_session.create()
+            new_session['anon_id'] = new_session.session_key
             self.request.session['anon_id'] = new_session.session_key
-            return Session.objects.get(
-                session_key=new_session.session_key,
-            )
+            return new_session.session_key
         else:
-            return Session.objects.get(
-                session_key=self.request.session.get('anon_id'),
-            )
+            return self.request.session.get('anon_id')

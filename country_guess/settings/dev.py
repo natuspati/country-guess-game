@@ -23,3 +23,5 @@ DATABASES = {
 }
 
 CACHES = {'default': django_cache_url.parse('dummy://')}
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
