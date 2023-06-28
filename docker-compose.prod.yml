@@ -24,7 +24,7 @@ services:
         python manage.py migrate --noinput
         python manage.py loaddata static/country_data.json
         python manage.py reset_countries_dates
-        gunicorn country_guess.wsgi:application --bind 0.0.0.0:5000
+        gunicorn country_guess.wsgi:application -c /app/country_guess/gunicorn.conf.py
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
@@ -46,7 +46,7 @@ services:
       - .env.prod
     healthcheck:
       # update values from .end.prod
-      test: ["CMD", "pg_isready", "-U", "django_admin", "-d", "django_db"]
+      test: [ "CMD", "pg_isready", "-U", "django_admin", "-d", "django_db" ]
       interval: 60s
       timeout: 60s
       retries: 5
@@ -54,7 +54,7 @@ services:
     image: redis:7-alpine
     restart: always
     command:
-        redis-server --maxmemory-policy allkeys-lru --maxmemory 512mb
+      redis-server --maxmemory-policy allkeys-lru --maxmemory 512mb
     expose:
       - 6379
     volumes:

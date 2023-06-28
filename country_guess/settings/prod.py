@@ -3,7 +3,7 @@ from country_guess.settings.base import *
 prod_env = Env()
 prod_env.read_env('.env.prod')
 
-DEBUG = prod_env.str('DJANGO_DEBUG', False)
+DEBUG = prod_env.str('DJANGO_DEBUG', "False")
 
 SECRET_KEY = prod_env.str('DJANGO_SECRET_KEY')
 
@@ -31,6 +31,38 @@ CACHES = {
 }
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'root': {'level': 'INFO', 'handlers': ['file']},
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': '/var/log/django/django.log',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
 
 # TODO: add SSL certification and prepare for deployment
 # Security considerations
