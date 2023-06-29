@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src=static/random_logo.png alt="Logo" width="80" height="80">
+    <img src=static/random_logo.png alt="Logo" width="200" >
   </a>
 
 <h3 align="center">Guess a Country</h3>
@@ -151,14 +151,14 @@ npm install npm@latest -g
 Game flow is explained in [About the Game](#about-the-game). Here are some screenshots.
 
 <p float="left">
-  <img src=static/default.png alt="Default" width="80" height="80">
-  <img src=static/suggestions.png alt="Suggestions" width="80" height="80">
-  <img src=static/incorrect_guess.png alt="Incorrect guess" width="80" height="80">
+  <img src=static/default.png alt="Default" width="200" >
+  <img src=static/suggestions.png alt="Suggestions" width="200" >
+  <img src=static/incorrect_guess.png alt="Incorrect guess" width="200" >
 </p>
 <p float="left">
-  <img src=static/invalid_guess.png alt="Invalid Guess" width="80" height="80">
-  <img src=static/correct_guess.png alt="Correct guess" width="80" height="80">
-  <img src=static/no_guesses.png alt="No guesses left" width="80" height="80">
+  <img src=static/invalid_guess.png alt="Invalid Guess" width="200" >
+  <img src=static/correct_guess.png alt="Correct guess" width="200" >
+  <img src=static/no_guesses.png alt="No guesses left" width="200" >
 </p>
 
 ### Changes to front-end
