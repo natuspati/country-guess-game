@@ -1,0 +1,3316 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Country",
+      "content_type": 7,
+      "codename": "add_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Country",
+      "content_type": 7,
+      "codename": "change_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Country",
+      "content_type": 7,
+      "codename": "delete_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Country",
+      "content_type": 7,
+      "codename": "view_country"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add user stats",
+      "content_type": 8,
+      "codename": "add_userstats"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change user stats",
+      "content_type": 8,
+      "codename": "change_userstats"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete user stats",
+      "content_type": 8,
+      "codename": "delete_userstats"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view user stats",
+      "content_type": 8,
+      "codename": "view_userstats"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "game",
+      "model": "country"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "game",
+      "model": "userstats"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "378ffzozdqa2knjwr3fwxpet55rsgsg0",
+    "fields": {
+      "session_data": "e30:1qCker:NH3FMLs0CNYqSQZMtLwhyqtGpMH8iD5PmXqguIhoDPg",
+      "expire_date": "2023-06-25T17:33:17.824Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "9v2a2fcxxpkxbffsfwttyym5rmu03cfw",
+    "fields": {
+      "session_data": "e30:1qCkeN:ia-8ksSMbsGUs16wx-sw7Yvj-tF-nJpGqrUY0zCW8cc",
+      "expire_date": "2023-06-25T17:32:47.194Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "dkp44m3pvq0ylpau2d2qkpuu7n9yo5gv",
+    "fields": {
+      "session_data": "eyJhbm9uX2lkIjoiOXYyYTJmY3h4cGt4YmZmc2Z3dHR5eW01cm11MDNjZncifQ:1qCkeN:PlZ_gflO6gzvKZnHOvgej6CZECVlj6Arp4jYAea8BDU",
+      "expire_date": "2023-06-25T17:32:47.212Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "wn400x8w3s7awx2h5gzp3bgcs63fwrq2",
+    "fields": {
+      "session_data": "eyJhbm9uX2lkIjoiMzc4ZmZ6b3pkcWEya25qd3IzZnd4cGV0NTVyc2dzZzAifQ:1qCker:QxMCf5bA13zhu89oQ3x5sUWOnC7sMO2uJFa7cSAV01U",
+      "expire_date": "2023-06-25T17:33:17.860Z"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 1,
+    "fields": {
+      "name": "Jordan",
+      "slug": "jordan",
+      "capital": "Amman",
+      "region": "AS",
+      "population": 10203140,
+      "flag": "flag_images/jordan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.287Z",
+      "used_at": "2023-07-14"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 2,
+    "fields": {
+      "name": "Serbia",
+      "slug": "serbia",
+      "capital": "Belgrade",
+      "region": "EU",
+      "population": 6908224,
+      "flag": "flag_images/serbia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.362Z",
+      "used_at": "2023-12-13"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 3,
+    "fields": {
+      "name": "Andorra",
+      "slug": "andorra",
+      "capital": "Andorra la Vella",
+      "region": "EU",
+      "population": 77265,
+      "flag": "flag_images/andorra.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.291Z",
+      "used_at": "2023-07-20"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 4,
+    "fields": {
+      "name": "Bolivia",
+      "slug": "bolivia",
+      "capital": "Sucre",
+      "region": "AM",
+      "population": 11673029,
+      "flag": "flag_images/bolivia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.331Z",
+      "used_at": "2023-10-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 5,
+    "fields": {
+      "name": "Libya",
+      "slug": "libya",
+      "capital": "Tripoli",
+      "region": "AF",
+      "population": 6871287,
+      "flag": "flag_images/libya.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.303Z",
+      "used_at": "2023-08-07"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 6,
+    "fields": {
+      "name": "Mali",
+      "slug": "mali",
+      "capital": "Bamako",
+      "region": "AF",
+      "population": 20250834,
+      "flag": "flag_images/mali.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.281Z",
+      "used_at": "2023-07-07"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 7,
+    "fields": {
+      "name": "Armenia",
+      "slug": "armenia",
+      "capital": "Yerevan",
+      "region": "AS",
+      "population": 2963234,
+      "flag": "flag_images/armenia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.358Z",
+      "used_at": "2023-12-06"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 8,
+    "fields": {
+      "name": "Mauritius",
+      "slug": "mauritius",
+      "capital": "Port Louis",
+      "region": "AF",
+      "population": 1265740,
+      "flag": "flag_images/mauritius.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.345Z",
+      "used_at": "2023-11-07"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 9,
+    "fields": {
+      "name": "Maldives",
+      "slug": "maldives",
+      "capital": "Malé",
+      "region": "AS",
+      "population": 540542,
+      "flag": "flag_images/maldives.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.327Z",
+      "used_at": "2023-09-23"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 10,
+    "fields": {
+      "name": "North Macedonia",
+      "slug": "north-macedonia",
+      "capital": "Skopje",
+      "region": "EU",
+      "population": 2077132,
+      "flag": "flag_images/north-macedonia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.323Z",
+      "used_at": "2023-09-13"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 11,
+    "fields": {
+      "name": "Ethiopia",
+      "slug": "ethiopia",
+      "capital": "Addis Ababa",
+      "region": "AF",
+      "population": 114963583,
+      "flag": "flag_images/ethiopia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.330Z",
+      "used_at": "2023-09-29"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 12,
+    "fields": {
+      "name": "Iraq",
+      "slug": "iraq",
+      "capital": "Baghdad",
+      "region": "AS",
+      "population": 40222503,
+      "flag": "flag_images/iraq.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.283Z",
+      "used_at": "2023-07-09"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 13,
+    "fields": {
+      "name": "Guatemala",
+      "slug": "guatemala",
+      "capital": "Guatemala City",
+      "region": "AM",
+      "population": 16858333,
+      "flag": "flag_images/guatemala.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.315Z",
+      "used_at": "2023-08-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 14,
+    "fields": {
+      "name": "Trinidad and Tobago",
+      "slug": "trinidad-and-tobago",
+      "capital": "Port of Spain",
+      "region": "AM",
+      "population": 1399491,
+      "flag": "flag_images/trinidad-and-tobago.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.304Z",
+      "used_at": "2023-08-09"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 15,
+    "fields": {
+      "name": "Peru",
+      "slug": "peru",
+      "capital": "Lima",
+      "region": "AM",
+      "population": 32971846,
+      "flag": "flag_images/peru.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.286Z",
+      "used_at": "2023-07-13"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 16,
+    "fields": {
+      "name": "Suriname",
+      "slug": "suriname",
+      "capital": "Paramaribo",
+      "region": "AM",
+      "population": 586634,
+      "flag": "flag_images/suriname.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.298Z",
+      "used_at": "2023-07-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 17,
+    "fields": {
+      "name": "Sweden",
+      "slug": "sweden",
+      "capital": "Stockholm",
+      "region": "EU",
+      "population": 10353442,
+      "flag": "flag_images/sweden.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.364Z",
+      "used_at": "2023-12-18"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 18,
+    "fields": {
+      "name": "Benin",
+      "slug": "benin",
+      "capital": "Porto-Novo",
+      "region": "AF",
+      "population": 12123198,
+      "flag": "flag_images/benin.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.292Z",
+      "used_at": "2023-07-21"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 19,
+    "fields": {
+      "name": "Estonia",
+      "slug": "estonia",
+      "capital": "Tallinn",
+      "region": "EU",
+      "population": 1331057,
+      "flag": "flag_images/estonia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.320Z",
+      "used_at": "2023-09-05"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 20,
+    "fields": {
+      "name": "Zimbabwe",
+      "slug": "zimbabwe",
+      "capital": "Harare",
+      "region": "AF",
+      "population": 14862927,
+      "flag": "flag_images/zimbabwe.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.369Z",
+      "used_at": "2023-12-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 21,
+    "fields": {
+      "name": "Slovakia",
+      "slug": "slovakia",
+      "capital": "Bratislava",
+      "region": "EU",
+      "population": 5458827,
+      "flag": "flag_images/slovakia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.370Z",
+      "used_at": "2023-12-31"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 22,
+    "fields": {
+      "name": "Netherlands",
+      "slug": "netherlands",
+      "capital": "Amsterdam",
+      "region": "EU",
+      "population": 16655799,
+      "flag": "flag_images/netherlands.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.349Z",
+      "used_at": "2023-11-17"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 23,
+    "fields": {
+      "name": "Ecuador",
+      "slug": "ecuador",
+      "capital": "Quito",
+      "region": "AM",
+      "population": 17643060,
+      "flag": "flag_images/ecuador.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.347Z",
+      "used_at": "2023-11-10"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 24,
+    "fields": {
+      "name": "Saudi Arabia",
+      "slug": "saudi-arabia",
+      "capital": "Riyadh",
+      "region": "AS",
+      "population": 34813867,
+      "flag": "flag_images/saudi-arabia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.321Z",
+      "used_at": "2023-09-08"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 25,
+    "fields": {
+      "name": "United Arab Emirates",
+      "slug": "united-arab-emirates",
+      "capital": "Abu Dhabi",
+      "region": "AS",
+      "population": 9890400,
+      "flag": "flag_images/united-arab-emirates.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.338Z",
+      "used_at": "2023-10-18"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 26,
+    "fields": {
+      "name": "Afghanistan",
+      "slug": "afghanistan",
+      "capital": "Kabul",
+      "region": "AS",
+      "population": 40218234,
+      "flag": "flag_images/afghanistan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.351Z",
+      "used_at": "2023-11-21"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 27,
+    "fields": {
+      "name": "Central African Republic",
+      "slug": "central-african-republic",
+      "capital": "Bangui",
+      "region": "AF",
+      "population": 4829764,
+      "flag": "flag_images/central-african-republic.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.306Z",
+      "used_at": "2023-08-12"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 28,
+    "fields": {
+      "name": "Panama",
+      "slug": "panama",
+      "capital": "Panama City",
+      "region": "AM",
+      "population": 4314768,
+      "flag": "flag_images/panama.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.351Z",
+      "used_at": "2023-11-22"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 29,
+    "fields": {
+      "name": "Vatican City",
+      "slug": "vatican-city",
+      "capital": "Vatican City",
+      "region": "EU",
+      "population": 451,
+      "flag": "flag_images/vatican-city.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.342Z",
+      "used_at": "2023-10-29"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 30,
+    "fields": {
+      "name": "Syria",
+      "slug": "syria",
+      "capital": "Damascus",
+      "region": "AS",
+      "population": 17500657,
+      "flag": "flag_images/syria.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.314Z",
+      "used_at": "2023-08-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 31,
+    "fields": {
+      "name": "Vanuatu",
+      "slug": "vanuatu",
+      "capital": "Port Vila",
+      "region": "OC",
+      "population": 307150,
+      "flag": "flag_images/vanuatu.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.354Z",
+      "used_at": "2023-11-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 32,
+    "fields": {
+      "name": "Honduras",
+      "slug": "honduras",
+      "capital": "Tegucigalpa",
+      "region": "AM",
+      "population": 9904608,
+      "flag": "flag_images/honduras.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.272Z",
+      "used_at": "2023-06-29"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 33,
+    "fields": {
+      "name": "Kiribati",
+      "slug": "kiribati",
+      "capital": "South Tarawa",
+      "region": "OC",
+      "population": 119446,
+      "flag": "flag_images/kiribati.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.336Z",
+      "used_at": "2023-10-14"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 34,
+    "fields": {
+      "name": "Chile",
+      "slug": "chile",
+      "capital": "Santiago",
+      "region": "AM",
+      "population": 19116209,
+      "flag": "flag_images/chile.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.270Z",
+      "used_at": "2023-06-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 35,
+    "fields": {
+      "name": "Burkina Faso",
+      "slug": "burkina-faso",
+      "capital": "Ouagadougou",
+      "region": "AF",
+      "population": 20903278,
+      "flag": "flag_images/burkina-faso.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.290Z",
+      "used_at": "2023-07-18"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 36,
+    "fields": {
+      "name": "Saint Kitts and Nevis",
+      "slug": "saint-kitts-and-nevis",
+      "capital": "Basseterre",
+      "region": "AM",
+      "population": 53192,
+      "flag": "flag_images/saint-kitts-and-nevis.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.299Z",
+      "used_at": "2023-08-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 37,
+    "fields": {
+      "name": "Mexico",
+      "slug": "mexico",
+      "capital": "Mexico City",
+      "region": "AM",
+      "population": 128932753,
+      "flag": "flag_images/mexico.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.307Z",
+      "used_at": "2023-08-13"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 38,
+    "fields": {
+      "name": "China",
+      "slug": "china",
+      "capital": "Beijing",
+      "region": "AS",
+      "population": 1402112000,
+      "flag": "flag_images/china.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.323Z",
+      "used_at": "2023-09-12"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 39,
+    "fields": {
+      "name": "Timor-Leste",
+      "slug": "timor-leste",
+      "capital": "Dili",
+      "region": "AS",
+      "population": 1318442,
+      "flag": "flag_images/timor-leste.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.310Z",
+      "used_at": "2023-08-17"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 40,
+    "fields": {
+      "name": "South Sudan",
+      "slug": "south-sudan",
+      "capital": "Juba",
+      "region": "AF",
+      "population": 11193729,
+      "flag": "flag_images/south-sudan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.355Z",
+      "used_at": "2023-12-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 41,
+    "fields": {
+      "name": "Eswatini",
+      "slug": "eswatini",
+      "capital": "Mbabane",
+      "region": "AF",
+      "population": 1160164,
+      "flag": "flag_images/eswatini.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.319Z",
+      "used_at": "2023-09-04"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 42,
+    "fields": {
+      "name": "Uzbekistan",
+      "slug": "uzbekistan",
+      "capital": "Tashkent",
+      "region": "AS",
+      "population": 34232050,
+      "flag": "flag_images/uzbekistan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.349Z",
+      "used_at": "2023-11-16"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 43,
+    "fields": {
+      "name": "Indonesia",
+      "slug": "indonesia",
+      "capital": "Jakarta",
+      "region": "AS",
+      "population": 273523621,
+      "flag": "flag_images/indonesia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.343Z",
+      "used_at": "2023-11-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 44,
+    "fields": {
+      "name": "Paraguay",
+      "slug": "paraguay",
+      "capital": "Asunción",
+      "region": "AM",
+      "population": 7132530,
+      "flag": "flag_images/paraguay.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.325Z",
+      "used_at": "2023-09-17"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 45,
+    "fields": {
+      "name": "Monaco",
+      "slug": "monaco",
+      "capital": "Monaco",
+      "region": "EU",
+      "population": 39244,
+      "flag": "flag_images/monaco.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.345Z",
+      "used_at": "2023-11-05"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 46,
+    "fields": {
+      "name": "Grenada",
+      "slug": "grenada",
+      "capital": "St. George's",
+      "region": "AM",
+      "population": 112519,
+      "flag": "flag_images/grenada.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.345Z",
+      "used_at": "2023-11-06"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 47,
+    "fields": {
+      "name": "Croatia",
+      "slug": "croatia",
+      "capital": "Zagreb",
+      "region": "EU",
+      "population": 4047200,
+      "flag": "flag_images/croatia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.330Z",
+      "used_at": "2023-09-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 48,
+    "fields": {
+      "name": "Poland",
+      "slug": "poland",
+      "capital": "Warsaw",
+      "region": "EU",
+      "population": 37950802,
+      "flag": "flag_images/poland.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.265Z",
+      "used_at": "2023-06-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 49,
+    "fields": {
+      "name": "Bosnia and Herzegovina",
+      "slug": "bosnia-and-herzegovina",
+      "capital": "Sarajevo",
+      "region": "EU",
+      "population": 3280815,
+      "flag": "flag_images/bosnia-and-herzegovina.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.295Z",
+      "used_at": "2023-07-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 50,
+    "fields": {
+      "name": "Canada",
+      "slug": "canada",
+      "capital": "Ottawa",
+      "region": "AM",
+      "population": 38005238,
+      "flag": "flag_images/canada.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.317Z",
+      "used_at": "2023-09-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 51,
+    "fields": {
+      "name": "Portugal",
+      "slug": "portugal",
+      "capital": "Lisbon",
+      "region": "EU",
+      "population": 10305564,
+      "flag": "flag_images/portugal.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.333Z",
+      "used_at": "2023-10-07"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 52,
+    "fields": {
+      "name": "Brazil",
+      "slug": "brazil",
+      "capital": "Brasília",
+      "region": "AM",
+      "population": 212559409,
+      "flag": "flag_images/brazil.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.271Z",
+      "used_at": "2023-06-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 53,
+    "fields": {
+      "name": "Mauritania",
+      "slug": "mauritania",
+      "capital": "Nouakchott",
+      "region": "AF",
+      "population": 4649660,
+      "flag": "flag_images/mauritania.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.327Z",
+      "used_at": "2023-09-22"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 54,
+    "fields": {
+      "name": "Israel",
+      "slug": "israel",
+      "capital": "Jerusalem",
+      "region": "AS",
+      "population": 9216900,
+      "flag": "flag_images/israel.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.296Z",
+      "used_at": "2023-07-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 55,
+    "fields": {
+      "name": "Brunei",
+      "slug": "brunei",
+      "capital": "Bandar Seri Begawan",
+      "region": "AS",
+      "population": 437483,
+      "flag": "flag_images/brunei.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.350Z",
+      "used_at": "2023-11-19"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 56,
+    "fields": {
+      "name": "Angola",
+      "slug": "angola",
+      "capital": "Luanda",
+      "region": "AF",
+      "population": 32866268,
+      "flag": "flag_images/angola.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.325Z",
+      "used_at": "2023-09-16"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 57,
+    "fields": {
+      "name": "Malta",
+      "slug": "malta",
+      "capital": "Valletta",
+      "region": "EU",
+      "population": 525285,
+      "flag": "flag_images/malta.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.301Z",
+      "used_at": "2023-08-04"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 58,
+    "fields": {
+      "name": "Belarus",
+      "slug": "belarus",
+      "capital": "Minsk",
+      "region": "EU",
+      "population": 9398861,
+      "flag": "flag_images/belarus.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.306Z",
+      "used_at": "2023-08-11"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 59,
+    "fields": {
+      "name": "Turkey",
+      "slug": "turkey",
+      "capital": "Ankara",
+      "region": "AS",
+      "population": 84339067,
+      "flag": "flag_images/turkey.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.357Z",
+      "used_at": "2023-12-05"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 60,
+    "fields": {
+      "name": "Finland",
+      "slug": "finland",
+      "capital": "Helsinki",
+      "region": "EU",
+      "population": 5530719,
+      "flag": "flag_images/finland.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.365Z",
+      "used_at": "2023-12-19"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 61,
+    "fields": {
+      "name": "Bhutan",
+      "slug": "bhutan",
+      "capital": "Thimphu",
+      "region": "AS",
+      "population": 771612,
+      "flag": "flag_images/bhutan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.353Z",
+      "used_at": "2023-11-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 62,
+    "fields": {
+      "name": "Spain",
+      "slug": "spain",
+      "capital": "Madrid",
+      "region": "EU",
+      "population": 47351567,
+      "flag": "flag_images/spain.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.346Z",
+      "used_at": "2023-11-09"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 63,
+    "fields": {
+      "name": "Venezuela",
+      "slug": "venezuela",
+      "capital": "Caracas",
+      "region": "AM",
+      "population": 28435943,
+      "flag": "flag_images/venezuela.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.289Z",
+      "used_at": "2023-07-17"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 64,
+    "fields": {
+      "name": "Qatar",
+      "slug": "qatar",
+      "capital": "Doha",
+      "region": "AS",
+      "population": 2881060,
+      "flag": "flag_images/qatar.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.347Z",
+      "used_at": "2023-11-11"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 65,
+    "fields": {
+      "name": "Czechia",
+      "slug": "czechia",
+      "capital": "Prague",
+      "region": "EU",
+      "population": 10698896,
+      "flag": "flag_images/czechia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.366Z",
+      "used_at": "2023-12-22"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 66,
+    "fields": {
+      "name": "Kuwait",
+      "slug": "kuwait",
+      "capital": "Kuwait City",
+      "region": "AS",
+      "population": 4270563,
+      "flag": "flag_images/kuwait.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.334Z",
+      "used_at": "2023-10-08"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 67,
+    "fields": {
+      "name": "Montenegro",
+      "slug": "montenegro",
+      "capital": "Podgorica",
+      "region": "EU",
+      "population": 621718,
+      "flag": "flag_images/montenegro.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.349Z",
+      "used_at": "2023-11-15"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 68,
+    "fields": {
+      "name": "India",
+      "slug": "india",
+      "capital": "New Delhi",
+      "region": "AS",
+      "population": 1380004385,
+      "flag": "flag_images/india.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.328Z",
+      "used_at": "2023-09-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 69,
+    "fields": {
+      "name": "New Zealand",
+      "slug": "new-zealand",
+      "capital": "Wellington",
+      "region": "OC",
+      "population": 5084300,
+      "flag": "flag_images/new-zealand.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.332Z",
+      "used_at": "2023-10-04"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 70,
+    "fields": {
+      "name": "Jamaica",
+      "slug": "jamaica",
+      "capital": "Kingston",
+      "region": "AM",
+      "population": 2961161,
+      "flag": "flag_images/jamaica.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.326Z",
+      "used_at": "2023-09-20"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 71,
+    "fields": {
+      "name": "San Marino",
+      "slug": "san-marino",
+      "capital": "City of San Marino",
+      "region": "EU",
+      "population": 33938,
+      "flag": "flag_images/san-marino.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.371Z",
+      "used_at": "2024-01-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 72,
+    "fields": {
+      "name": "Republic of the Congo",
+      "slug": "republic-of-the-congo",
+      "capital": "Brazzaville",
+      "region": "AF",
+      "population": 5657000,
+      "flag": "flag_images/republic-of-the-congo.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.326Z",
+      "used_at": "2023-09-19"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 73,
+    "fields": {
+      "name": "Pakistan",
+      "slug": "pakistan",
+      "capital": "Islamabad",
+      "region": "AS",
+      "population": 220892331,
+      "flag": "flag_images/pakistan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.297Z",
+      "used_at": "2023-07-29"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 74,
+    "fields": {
+      "name": "France",
+      "slug": "france",
+      "capital": "Paris",
+      "region": "EU",
+      "population": 67391582,
+      "flag": "flag_images/france.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.282Z",
+      "used_at": "2023-07-08"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 75,
+    "fields": {
+      "name": "Kazakhstan",
+      "slug": "kazakhstan",
+      "capital": "Nur-Sultan",
+      "region": "AS",
+      "population": 18754440,
+      "flag": "flag_images/kazakhstan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.344Z",
+      "used_at": "2023-11-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 76,
+    "fields": {
+      "name": "Bahrain",
+      "slug": "bahrain",
+      "capital": "Manama",
+      "region": "AS",
+      "population": 1701583,
+      "flag": "flag_images/bahrain.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.359Z",
+      "used_at": "2023-12-09"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 77,
+    "fields": {
+      "name": "Fiji",
+      "slug": "fiji",
+      "capital": "Suva",
+      "region": "OC",
+      "population": 896444,
+      "flag": "flag_images/fiji.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.299Z",
+      "used_at": "2023-07-31"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 78,
+    "fields": {
+      "name": "Iceland",
+      "slug": "iceland",
+      "capital": "Reykjavik",
+      "region": "EU",
+      "population": 366425,
+      "flag": "flag_images/iceland.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.330Z",
+      "used_at": "2023-09-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 79,
+    "fields": {
+      "name": "Myanmar",
+      "slug": "myanmar",
+      "capital": "Naypyidaw",
+      "region": "AS",
+      "population": 54409794,
+      "flag": "flag_images/myanmar.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.347Z",
+      "used_at": "2023-11-12"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 80,
+    "fields": {
+      "name": "Bangladesh",
+      "slug": "bangladesh",
+      "capital": "Dhaka",
+      "region": "AS",
+      "population": 164689383,
+      "flag": "flag_images/bangladesh.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.368Z",
+      "used_at": "2023-12-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 81,
+    "fields": {
+      "name": "Philippines",
+      "slug": "philippines",
+      "capital": "Manila",
+      "region": "AS",
+      "population": 109581085,
+      "flag": "flag_images/philippines.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.333Z",
+      "used_at": "2023-10-06"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 82,
+    "fields": {
+      "name": "Equatorial Guinea",
+      "slug": "equatorial-guinea",
+      "capital": "Malabo",
+      "region": "AF",
+      "population": 1402985,
+      "flag": "flag_images/equatorial-guinea.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.337Z",
+      "used_at": "2023-10-16"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 83,
+    "fields": {
+      "name": "Ireland",
+      "slug": "ireland",
+      "capital": "Dublin",
+      "region": "EU",
+      "population": 4994724,
+      "flag": "flag_images/ireland.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.361Z",
+      "used_at": "2023-12-12"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 84,
+    "fields": {
+      "name": "Nepal",
+      "slug": "nepal",
+      "capital": "Kathmandu",
+      "region": "AS",
+      "population": 29136808,
+      "flag": "flag_images/nepal.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.312Z",
+      "used_at": "2023-08-22"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 85,
+    "fields": {
+      "name": "Yemen",
+      "slug": "yemen",
+      "capital": "Sana'a",
+      "region": "AS",
+      "population": 29825968,
+      "flag": "flag_images/yemen.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.314Z",
+      "used_at": "2023-08-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 86,
+    "fields": {
+      "name": "South Korea",
+      "slug": "south-korea",
+      "capital": "Seoul",
+      "region": "AS",
+      "population": 51780579,
+      "flag": "flag_images/south-korea.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.315Z",
+      "used_at": "2023-08-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 87,
+    "fields": {
+      "name": "Denmark",
+      "slug": "denmark",
+      "capital": "Copenhagen",
+      "region": "EU",
+      "population": 5831404,
+      "flag": "flag_images/denmark.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.308Z",
+      "used_at": "2023-08-15"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 88,
+    "fields": {
+      "name": "Oman",
+      "slug": "oman",
+      "capital": "Muscat",
+      "region": "AS",
+      "population": 5106622,
+      "flag": "flag_images/oman.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.366Z",
+      "used_at": "2023-12-23"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 89,
+    "fields": {
+      "name": "Saint Vincent and the Grenadines",
+      "slug": "saint-vincent-and-the-grenadines",
+      "capital": "Kingstown",
+      "region": "AM",
+      "population": 110947,
+      "flag": "flag_images/saint-vincent-and-the-grenadines.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.368Z",
+      "used_at": "2023-12-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 90,
+    "fields": {
+      "name": "Eritrea",
+      "slug": "eritrea",
+      "capital": "Asmara",
+      "region": "AF",
+      "population": 5352000,
+      "flag": "flag_images/eritrea.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.352Z",
+      "used_at": "2023-11-23"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 91,
+    "fields": {
+      "name": "Australia",
+      "slug": "australia",
+      "capital": "Canberra",
+      "region": "OC",
+      "population": 25687041,
+      "flag": "flag_images/australia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.338Z",
+      "used_at": "2023-10-19"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 92,
+    "fields": {
+      "name": "Iran",
+      "slug": "iran",
+      "capital": "Tehran",
+      "region": "AS",
+      "population": 83992953,
+      "flag": "flag_images/iran.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.335Z",
+      "used_at": "2023-10-11"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 93,
+    "fields": {
+      "name": "El Salvador",
+      "slug": "el-salvador",
+      "capital": "San Salvador",
+      "region": "AM",
+      "population": 6486201,
+      "flag": "flag_images/el-salvador.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.310Z",
+      "used_at": "2023-08-18"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 94,
+    "fields": {
+      "name": "Tanzania",
+      "slug": "tanzania",
+      "capital": "Dodoma",
+      "region": "AF",
+      "population": 59734213,
+      "flag": "flag_images/tanzania.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.353Z",
+      "used_at": "2023-11-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 95,
+    "fields": {
+      "name": "Solomon Islands",
+      "slug": "solomon-islands",
+      "capital": "Honiara",
+      "region": "OC",
+      "population": 686878,
+      "flag": "flag_images/solomon-islands.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.267Z",
+      "used_at": "2023-06-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 96,
+    "fields": {
+      "name": "Kenya",
+      "slug": "kenya",
+      "capital": "Nairobi",
+      "region": "AF",
+      "population": 53771300,
+      "flag": "flag_images/kenya.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.312Z",
+      "used_at": "2023-08-21"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 97,
+    "fields": {
+      "name": "Dominican Republic",
+      "slug": "dominican-republic",
+      "capital": "Santo Domingo",
+      "region": "AM",
+      "population": 10847904,
+      "flag": "flag_images/dominican-republic.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.358Z",
+      "used_at": "2023-12-07"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 98,
+    "fields": {
+      "name": "Greece",
+      "slug": "greece",
+      "capital": "Athens",
+      "region": "EU",
+      "population": 10715549,
+      "flag": "flag_images/greece.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.280Z",
+      "used_at": "2023-07-06"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 99,
+    "fields": {
+      "name": "Rwanda",
+      "slug": "rwanda",
+      "capital": "Kigali",
+      "region": "AF",
+      "population": 12952209,
+      "flag": "flag_images/rwanda.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.297Z",
+      "used_at": "2023-07-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 100,
+    "fields": {
+      "name": "Tuvalu",
+      "slug": "tuvalu",
+      "capital": "Funafuti",
+      "region": "OC",
+      "population": 11792,
+      "flag": "flag_images/tuvalu.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.293Z",
+      "used_at": "2023-07-22"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 101,
+    "fields": {
+      "name": "Guyana",
+      "slug": "guyana",
+      "capital": "Georgetown",
+      "region": "AM",
+      "population": 786559,
+      "flag": "flag_images/guyana.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.284Z",
+      "used_at": "2023-07-11"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 102,
+    "fields": {
+      "name": "Seychelles",
+      "slug": "seychelles",
+      "capital": "Victoria",
+      "region": "AF",
+      "population": 98462,
+      "flag": "flag_images/seychelles.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.340Z",
+      "used_at": "2023-10-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 103,
+    "fields": {
+      "name": "North Korea",
+      "slug": "north-korea",
+      "capital": "Pyongyang",
+      "region": "AS",
+      "population": 25778815,
+      "flag": "flag_images/north-korea.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.328Z",
+      "used_at": "2023-09-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 104,
+    "fields": {
+      "name": "Botswana",
+      "slug": "botswana",
+      "capital": "Gaborone",
+      "region": "AF",
+      "population": 2351625,
+      "flag": "flag_images/botswana.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.319Z",
+      "used_at": "2023-09-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 105,
+    "fields": {
+      "name": "Cambodia",
+      "slug": "cambodia",
+      "capital": "Phnom Penh",
+      "region": "AS",
+      "population": 16718971,
+      "flag": "flag_images/cambodia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.365Z",
+      "used_at": "2023-12-20"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 106,
+    "fields": {
+      "name": "Barbados",
+      "slug": "barbados",
+      "capital": "Bridgetown",
+      "region": "AM",
+      "population": 287371,
+      "flag": "flag_images/barbados.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.343Z",
+      "used_at": "2023-11-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 107,
+    "fields": {
+      "name": "Colombia",
+      "slug": "colombia",
+      "capital": "Bogotá",
+      "region": "AM",
+      "population": 50882884,
+      "flag": "flag_images/colombia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.321Z",
+      "used_at": "2023-09-07"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 108,
+    "fields": {
+      "name": "Ukraine",
+      "slug": "ukraine",
+      "capital": "Kyiv",
+      "region": "EU",
+      "population": 44134693,
+      "flag": "flag_images/ukraine.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.357Z",
+      "used_at": "2023-12-04"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 109,
+    "fields": {
+      "name": "Ivory Coast",
+      "slug": "ivory-coast",
+      "capital": "Yamoussoukro",
+      "region": "AF",
+      "population": 26378275,
+      "flag": "flag_images/ivory-coast.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.325Z",
+      "used_at": "2023-09-18"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 110,
+    "fields": {
+      "name": "Nauru",
+      "slug": "nauru",
+      "capital": "Yaren",
+      "region": "OC",
+      "population": 10834,
+      "flag": "flag_images/nauru.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.275Z",
+      "used_at": "2023-07-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 111,
+    "fields": {
+      "name": "Namibia",
+      "slug": "namibia",
+      "capital": "Windhoek",
+      "region": "AF",
+      "population": 2540916,
+      "flag": "flag_images/namibia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.359Z",
+      "used_at": "2023-12-08"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 112,
+    "fields": {
+      "name": "Chad",
+      "slug": "chad",
+      "capital": "N'Djamena",
+      "region": "AF",
+      "population": 16425859,
+      "flag": "flag_images/chad.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.332Z",
+      "used_at": "2023-10-05"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 113,
+    "fields": {
+      "name": "Tonga",
+      "slug": "tonga",
+      "capital": "Nuku'alofa",
+      "region": "OC",
+      "population": 105697,
+      "flag": "flag_images/tonga.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.370Z",
+      "used_at": "2024-01-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 114,
+    "fields": {
+      "name": "Argentina",
+      "slug": "argentina",
+      "capital": "Buenos Aires",
+      "region": "AM",
+      "population": 45376763,
+      "flag": "flag_images/argentina.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.311Z",
+      "used_at": "2023-08-19"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 115,
+    "fields": {
+      "name": "Niger",
+      "slug": "niger",
+      "capital": "Niamey",
+      "region": "AF",
+      "population": 24206636,
+      "flag": "flag_images/niger.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.342Z",
+      "used_at": "2023-10-28"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 116,
+    "fields": {
+      "name": "Marshall Islands",
+      "slug": "marshall-islands",
+      "capital": "Majuro",
+      "region": "OC",
+      "population": 59194,
+      "flag": "flag_images/marshall-islands.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.329Z",
+      "used_at": "2023-09-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 117,
+    "fields": {
+      "name": "Costa Rica",
+      "slug": "costa-rica",
+      "capital": "San José",
+      "region": "AM",
+      "population": 5094114,
+      "flag": "flag_images/costa-rica.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.341Z",
+      "used_at": "2023-10-27"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 118,
+    "fields": {
+      "name": "Ghana",
+      "slug": "ghana",
+      "capital": "Accra",
+      "region": "AF",
+      "population": 31072945,
+      "flag": "flag_images/ghana.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.340Z",
+      "used_at": "2023-10-23"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 119,
+    "fields": {
+      "name": "Austria",
+      "slug": "austria",
+      "capital": "Vienna",
+      "region": "EU",
+      "population": 8917205,
+      "flag": "flag_images/austria.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.320Z",
+      "used_at": "2023-09-06"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 120,
+    "fields": {
+      "name": "Cuba",
+      "slug": "cuba",
+      "capital": "Havana",
+      "region": "AM",
+      "population": 11326616,
+      "flag": "flag_images/cuba.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.338Z",
+      "used_at": "2023-10-20"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 121,
+    "fields": {
+      "name": "Hungary",
+      "slug": "hungary",
+      "capital": "Budapest",
+      "region": "EU",
+      "population": 9749763,
+      "flag": "flag_images/hungary.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.316Z",
+      "used_at": "2023-08-29"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 122,
+    "fields": {
+      "name": "Micronesia",
+      "slug": "micronesia",
+      "capital": "Palikir",
+      "region": "OC",
+      "population": 115021,
+      "flag": "flag_images/micronesia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.360Z",
+      "used_at": "2023-12-11"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 123,
+    "fields": {
+      "name": "Belize",
+      "slug": "belize",
+      "capital": "Belmopan",
+      "region": "AM",
+      "population": 397621,
+      "flag": "flag_images/belize.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.353Z",
+      "used_at": "2023-11-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 124,
+    "fields": {
+      "name": "Bahamas",
+      "slug": "bahamas",
+      "capital": "Nassau",
+      "region": "AM",
+      "population": 393248,
+      "flag": "flag_images/bahamas.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.341Z",
+      "used_at": "2023-10-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 125,
+    "fields": {
+      "name": "São Tomé and Príncipe",
+      "slug": "sao-tome-and-principe",
+      "capital": "São Tomé",
+      "region": "AF",
+      "population": 219161,
+      "flag": "flag_images/sao-tome-and-principe.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.342Z",
+      "used_at": "2023-10-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 126,
+    "fields": {
+      "name": "Russia",
+      "slug": "russia",
+      "capital": "Moscow",
+      "region": "EU",
+      "population": 144104080,
+      "flag": "flag_images/russia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.327Z",
+      "used_at": "2023-09-21"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 127,
+    "fields": {
+      "name": "Luxembourg",
+      "slug": "luxembourg",
+      "capital": "Luxembourg",
+      "region": "EU",
+      "population": 632275,
+      "flag": "flag_images/luxembourg.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.324Z",
+      "used_at": "2023-09-15"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 128,
+    "fields": {
+      "name": "Nicaragua",
+      "slug": "nicaragua",
+      "capital": "Managua",
+      "region": "AM",
+      "population": 6624554,
+      "flag": "flag_images/nicaragua.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.363Z",
+      "used_at": "2023-12-15"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 129,
+    "fields": {
+      "name": "Tunisia",
+      "slug": "tunisia",
+      "capital": "Tunis",
+      "region": "AF",
+      "population": 11818618,
+      "flag": "flag_images/tunisia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.368Z",
+      "used_at": "2023-12-25"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 130,
+    "fields": {
+      "name": "DR Congo",
+      "slug": "dr-congo",
+      "capital": "Kinshasa",
+      "region": "AF",
+      "population": 108407721,
+      "flag": "flag_images/dr-congo.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.309Z",
+      "used_at": "2023-08-16"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 131,
+    "fields": {
+      "name": "South Africa",
+      "slug": "south-africa",
+      "capital": "Pretoria",
+      "region": "AF",
+      "population": 59308690,
+      "flag": "flag_images/south-africa.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.322Z",
+      "used_at": "2023-09-10"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 132,
+    "fields": {
+      "name": "Sierra Leone",
+      "slug": "sierra-leone",
+      "capital": "Freetown",
+      "region": "AF",
+      "population": 7976985,
+      "flag": "flag_images/sierra-leone.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.300Z",
+      "used_at": "2023-08-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 133,
+    "fields": {
+      "name": "Lesotho",
+      "slug": "lesotho",
+      "capital": "Maseru",
+      "region": "AF",
+      "population": 2142252,
+      "flag": "flag_images/lesotho.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.363Z",
+      "used_at": "2023-12-16"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 134,
+    "fields": {
+      "name": "Italy",
+      "slug": "italy",
+      "capital": "Rome",
+      "region": "EU",
+      "population": 59554023,
+      "flag": "flag_images/italy.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.305Z",
+      "used_at": "2023-08-10"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 135,
+    "fields": {
+      "name": "Djibouti",
+      "slug": "djibouti",
+      "capital": "Djibouti",
+      "region": "AF",
+      "population": 988002,
+      "flag": "flag_images/djibouti.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.352Z",
+      "used_at": "2023-11-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 136,
+    "fields": {
+      "name": "Sri Lanka",
+      "slug": "sri-lanka",
+      "capital": "Sri Jayawardenepura Kotte",
+      "region": "AS",
+      "population": 21919000,
+      "flag": "flag_images/sri-lanka.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.354Z",
+      "used_at": "2023-11-29"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 137,
+    "fields": {
+      "name": "Saint Lucia",
+      "slug": "saint-lucia",
+      "capital": "Castries",
+      "region": "AM",
+      "population": 183629,
+      "flag": "flag_images/saint-lucia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.332Z",
+      "used_at": "2023-10-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 138,
+    "fields": {
+      "name": "Samoa",
+      "slug": "samoa",
+      "capital": "Apia",
+      "region": "OC",
+      "population": 198410,
+      "flag": "flag_images/samoa.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.321Z",
+      "used_at": "2023-09-09"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 139,
+    "fields": {
+      "name": "Gabon",
+      "slug": "gabon",
+      "capital": "Libreville",
+      "region": "AF",
+      "population": 2225728,
+      "flag": "flag_images/gabon.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.301Z",
+      "used_at": "2023-08-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 140,
+    "fields": {
+      "name": "Turkmenistan",
+      "slug": "turkmenistan",
+      "capital": "Ashgabat",
+      "region": "AS",
+      "population": 6031187,
+      "flag": "flag_images/turkmenistan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.348Z",
+      "used_at": "2023-11-14"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 141,
+    "fields": {
+      "name": "Latvia",
+      "slug": "latvia",
+      "capital": "Riga",
+      "region": "EU",
+      "population": 1901548,
+      "flag": "flag_images/latvia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.355Z",
+      "used_at": "2023-11-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 142,
+    "fields": {
+      "name": "Senegal",
+      "slug": "senegal",
+      "capital": "Dakar",
+      "region": "AF",
+      "population": 16743930,
+      "flag": "flag_images/senegal.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.336Z",
+      "used_at": "2023-10-13"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 143,
+    "fields": {
+      "name": "Belgium",
+      "slug": "belgium",
+      "capital": "Brussels",
+      "region": "EU",
+      "population": 11555997,
+      "flag": "flag_images/belgium.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.344Z",
+      "used_at": "2023-11-04"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 144,
+    "fields": {
+      "name": "Moldova",
+      "slug": "moldova",
+      "capital": "Chișinău",
+      "region": "EU",
+      "population": 2617820,
+      "flag": "flag_images/moldova.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.334Z",
+      "used_at": "2023-10-10"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 145,
+    "fields": {
+      "name": "Liechtenstein",
+      "slug": "liechtenstein",
+      "capital": "Vaduz",
+      "region": "EU",
+      "population": 38137,
+      "flag": "flag_images/liechtenstein.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.284Z",
+      "used_at": "2023-07-10"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 146,
+    "fields": {
+      "name": "Malawi",
+      "slug": "malawi",
+      "capital": "Lilongwe",
+      "region": "AF",
+      "population": 19129955,
+      "flag": "flag_images/malawi.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.371Z",
+      "used_at": "2024-01-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 147,
+    "fields": {
+      "name": "Lebanon",
+      "slug": "lebanon",
+      "capital": "Beirut",
+      "region": "AS",
+      "population": 6825442,
+      "flag": "flag_images/lebanon.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.277Z",
+      "used_at": "2023-07-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 148,
+    "fields": {
+      "name": "Mongolia",
+      "slug": "mongolia",
+      "capital": "Ulan Bator",
+      "region": "AS",
+      "population": 3278292,
+      "flag": "flag_images/mongolia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.331Z",
+      "used_at": "2023-10-01"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 149,
+    "fields": {
+      "name": "Norway",
+      "slug": "norway",
+      "capital": "Oslo",
+      "region": "EU",
+      "population": 5379475,
+      "flag": "flag_images/norway.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.274Z",
+      "used_at": "2023-06-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 150,
+    "fields": {
+      "name": "Cameroon",
+      "slug": "cameroon",
+      "capital": "Yaoundé",
+      "region": "AF",
+      "population": 26545864,
+      "flag": "flag_images/cameroon.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.312Z",
+      "used_at": "2023-08-20"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 151,
+    "fields": {
+      "name": "Thailand",
+      "slug": "thailand",
+      "capital": "Bangkok",
+      "region": "AS",
+      "population": 69799978,
+      "flag": "flag_images/thailand.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.367Z",
+      "used_at": "2023-12-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 152,
+    "fields": {
+      "name": "Nigeria",
+      "slug": "nigeria",
+      "capital": "Abuja",
+      "region": "AF",
+      "population": 206139587,
+      "flag": "flag_images/nigeria.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.356Z",
+      "used_at": "2023-12-03"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 153,
+    "fields": {
+      "name": "Cape Verde",
+      "slug": "cape-verde",
+      "capital": "Praia",
+      "region": "AF",
+      "population": 555988,
+      "flag": "flag_images/cape-verde.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.364Z",
+      "used_at": "2023-12-17"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 154,
+    "fields": {
+      "name": "Algeria",
+      "slug": "algeria",
+      "capital": "Algiers",
+      "region": "AF",
+      "population": 44700000,
+      "flag": "flag_images/algeria.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.278Z",
+      "used_at": "2023-07-04"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 155,
+    "fields": {
+      "name": "Laos",
+      "slug": "laos",
+      "capital": "Vientiane",
+      "region": "AS",
+      "population": 7275556,
+      "flag": "flag_images/laos.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.336Z",
+      "used_at": "2023-10-15"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 156,
+    "fields": {
+      "name": "Azerbaijan",
+      "slug": "azerbaijan",
+      "capital": "Baku",
+      "region": "AS",
+      "population": 10110116,
+      "flag": "flag_images/azerbaijan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.339Z",
+      "used_at": "2023-10-22"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 157,
+    "fields": {
+      "name": "Morocco",
+      "slug": "morocco",
+      "capital": "Rabat",
+      "region": "AF",
+      "population": 36910558,
+      "flag": "flag_images/morocco.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.313Z",
+      "used_at": "2023-08-23"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 158,
+    "fields": {
+      "name": "Bulgaria",
+      "slug": "bulgaria",
+      "capital": "Sofia",
+      "region": "EU",
+      "population": 6927288,
+      "flag": "flag_images/bulgaria.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.294Z",
+      "used_at": "2023-07-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 159,
+    "fields": {
+      "name": "Burundi",
+      "slug": "burundi",
+      "capital": "Gitega",
+      "region": "AF",
+      "population": 11890781,
+      "flag": "flag_images/burundi.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.308Z",
+      "used_at": "2023-08-14"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 160,
+    "fields": {
+      "name": "Uganda",
+      "slug": "uganda",
+      "capital": "Kampala",
+      "region": "AF",
+      "population": 45741000,
+      "flag": "flag_images/uganda.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.288Z",
+      "used_at": "2023-07-16"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 161,
+    "fields": {
+      "name": "Mozambique",
+      "slug": "mozambique",
+      "capital": "Maputo",
+      "region": "AF",
+      "population": 31255435,
+      "flag": "flag_images/mozambique.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.348Z",
+      "used_at": "2023-11-13"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 162,
+    "fields": {
+      "name": "Georgia",
+      "slug": "georgia",
+      "capital": "Tbilisi",
+      "region": "AS",
+      "population": 3714000,
+      "flag": "flag_images/georgia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.291Z",
+      "used_at": "2023-07-19"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 163,
+    "fields": {
+      "name": "United Kingdom",
+      "slug": "united-kingdom",
+      "capital": "London",
+      "region": "EU",
+      "population": 67215293,
+      "flag": "flag_images/united-kingdom.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.350Z",
+      "used_at": "2023-11-18"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 164,
+    "fields": {
+      "name": "Romania",
+      "slug": "romania",
+      "capital": "Bucharest",
+      "region": "EU",
+      "population": 19286123,
+      "flag": "flag_images/romania.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.329Z",
+      "used_at": "2023-09-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 165,
+    "fields": {
+      "name": "Vietnam",
+      "slug": "vietnam",
+      "capital": "Hanoi",
+      "region": "AS",
+      "population": 97338583,
+      "flag": "flag_images/vietnam.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.362Z",
+      "used_at": "2023-12-14"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 166,
+    "fields": {
+      "name": "Japan",
+      "slug": "japan",
+      "capital": "Tokyo",
+      "region": "AS",
+      "population": 125836021,
+      "flag": "flag_images/japan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.288Z",
+      "used_at": "2023-07-15"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 167,
+    "fields": {
+      "name": "Egypt",
+      "slug": "egypt",
+      "capital": "Cairo",
+      "region": "AF",
+      "population": 102334403,
+      "flag": "flag_images/egypt.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.294Z",
+      "used_at": "2023-07-23"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 168,
+    "fields": {
+      "name": "Liberia",
+      "slug": "liberia",
+      "capital": "Monrovia",
+      "region": "AF",
+      "population": 5057677,
+      "flag": "flag_images/liberia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.366Z",
+      "used_at": "2023-12-21"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 169,
+    "fields": {
+      "name": "Lithuania",
+      "slug": "lithuania",
+      "capital": "Vilnius",
+      "region": "EU",
+      "population": 2794700,
+      "flag": "flag_images/lithuania.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.314Z",
+      "used_at": "2023-08-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 170,
+    "fields": {
+      "name": "Haiti",
+      "slug": "haiti",
+      "capital": "Port-au-Prince",
+      "region": "AM",
+      "population": 11402533,
+      "flag": "flag_images/haiti.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.346Z",
+      "used_at": "2023-11-08"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 171,
+    "fields": {
+      "name": "Papua New Guinea",
+      "slug": "papua-new-guinea",
+      "capital": "Port Moresby",
+      "region": "OC",
+      "population": 8947027,
+      "flag": "flag_images/papua-new-guinea.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.302Z",
+      "used_at": "2023-08-06"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 172,
+    "fields": {
+      "name": "Kyrgyzstan",
+      "slug": "kyrgyzstan",
+      "capital": "Bishkek",
+      "region": "AS",
+      "population": 6591600,
+      "flag": "flag_images/kyrgyzstan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.340Z",
+      "used_at": "2023-10-24"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 173,
+    "fields": {
+      "name": "Palau",
+      "slug": "palau",
+      "capital": "Ngerulmud",
+      "region": "OC",
+      "population": 18092,
+      "flag": "flag_images/palau.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.335Z",
+      "used_at": "2023-10-12"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 174,
+    "fields": {
+      "name": "Madagascar",
+      "slug": "madagascar",
+      "capital": "Antananarivo",
+      "region": "AF",
+      "population": 27691019,
+      "flag": "flag_images/madagascar.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.351Z",
+      "used_at": "2023-11-20"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 175,
+    "fields": {
+      "name": "Gambia",
+      "slug": "gambia",
+      "capital": "Banjul",
+      "region": "AF",
+      "population": 2416664,
+      "flag": "flag_images/gambia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.324Z",
+      "used_at": "2023-09-14"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 176,
+    "fields": {
+      "name": "Togo",
+      "slug": "togo",
+      "capital": "Lomé",
+      "region": "AF",
+      "population": 8278737,
+      "flag": "flag_images/togo.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.322Z",
+      "used_at": "2023-09-11"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 177,
+    "fields": {
+      "name": "Slovenia",
+      "slug": "slovenia",
+      "capital": "Ljubljana",
+      "region": "EU",
+      "population": 2100126,
+      "flag": "flag_images/slovenia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.317Z",
+      "used_at": "2023-08-31"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 178,
+    "fields": {
+      "name": "Singapore",
+      "slug": "singapore",
+      "capital": "Singapore",
+      "region": "AS",
+      "population": 5685807,
+      "flag": "flag_images/singapore.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.337Z",
+      "used_at": "2023-10-17"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 179,
+    "fields": {
+      "name": "United States",
+      "slug": "united-states",
+      "capital": "Washington, D.C.",
+      "region": "AM",
+      "population": 329484123,
+      "flag": "flag_images/united-states.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.343Z",
+      "used_at": "2023-10-31"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 180,
+    "fields": {
+      "name": "Malaysia",
+      "slug": "malaysia",
+      "capital": "Kuala Lumpur",
+      "region": "AS",
+      "population": 32365998,
+      "flag": "flag_images/malaysia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.318Z",
+      "used_at": "2023-09-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 181,
+    "fields": {
+      "name": "Germany",
+      "slug": "germany",
+      "capital": "Berlin",
+      "region": "EU",
+      "population": 83240525,
+      "flag": "flag_images/germany.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.356Z",
+      "used_at": "2023-12-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 182,
+    "fields": {
+      "name": "Antigua and Barbuda",
+      "slug": "antigua-and-barbuda",
+      "capital": "Saint John's",
+      "region": "AM",
+      "population": 97928,
+      "flag": "flag_images/antigua-and-barbuda.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.285Z",
+      "used_at": "2023-07-12"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 183,
+    "fields": {
+      "name": "Somalia",
+      "slug": "somalia",
+      "capital": "Mogadishu",
+      "region": "AF",
+      "population": 15893219,
+      "flag": "flag_images/somalia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.279Z",
+      "used_at": "2023-07-05"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 184,
+    "fields": {
+      "name": "Albania",
+      "slug": "albania",
+      "capital": "Tirana",
+      "region": "EU",
+      "population": 2837743,
+      "flag": "flag_images/albania.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.268Z",
+      "used_at": "2023-06-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 185,
+    "fields": {
+      "name": "Dominica",
+      "slug": "dominica",
+      "capital": "Roseau",
+      "region": "AM",
+      "population": 71991,
+      "flag": "flag_images/dominica.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.304Z",
+      "used_at": "2023-08-08"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 186,
+    "fields": {
+      "name": "Zambia",
+      "slug": "zambia",
+      "capital": "Lusaka",
+      "region": "AF",
+      "population": 18383956,
+      "flag": "flag_images/zambia.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.339Z",
+      "used_at": "2023-10-21"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 187,
+    "fields": {
+      "name": "Guinea",
+      "slug": "guinea",
+      "capital": "Conakry",
+      "region": "AF",
+      "population": 13132792,
+      "flag": "flag_images/guinea.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.334Z",
+      "used_at": "2023-10-09"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 188,
+    "fields": {
+      "name": "Comoros",
+      "slug": "comoros",
+      "capital": "Moroni",
+      "region": "AF",
+      "population": 869595,
+      "flag": "flag_images/comoros.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.370Z",
+      "used_at": "2023-12-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 189,
+    "fields": {
+      "name": "Switzerland",
+      "slug": "switzerland",
+      "capital": "Bern",
+      "region": "EU",
+      "population": 8654622,
+      "flag": "flag_images/switzerland.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.360Z",
+      "used_at": "2023-12-10"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 190,
+    "fields": {
+      "name": "Sudan",
+      "slug": "sudan",
+      "capital": "Khartoum",
+      "region": "AF",
+      "population": 43849269,
+      "flag": "flag_images/sudan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.276Z",
+      "used_at": "2023-07-02"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 191,
+    "fields": {
+      "name": "Tajikistan",
+      "slug": "tajikistan",
+      "capital": "Dushanbe",
+      "region": "AS",
+      "population": 9537642,
+      "flag": "flag_images/tajikistan.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.296Z",
+      "used_at": "2023-07-26"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 192,
+    "fields": {
+      "name": "Uruguay",
+      "slug": "uruguay",
+      "capital": "Montevideo",
+      "region": "AM",
+      "population": 3473727,
+      "flag": "flag_images/uruguay.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.302Z",
+      "used_at": "2023-08-05"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 193,
+    "fields": {
+      "name": "Cyprus",
+      "slug": "cyprus",
+      "capital": "Nicosia",
+      "region": "EU",
+      "population": 1207361,
+      "flag": "flag_images/cyprus.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.316Z",
+      "used_at": "2023-08-30"
+    }
+  },
+  {
+    "model": "game.country",
+    "pk": 194,
+    "fields": {
+      "name": "Guinea-Bissau",
+      "slug": "guinea-bissau",
+      "capital": "Bissau",
+      "region": "AF",
+      "population": 1967998,
+      "flag": "flag_images/guinea-bissau.png",
+      "ppoi": "0.5x0.5",
+      "modified_at": "2023-06-23T17:44:10.369Z",
+      "used_at": "2023-12-29"
+    }
+  },
+  {
+    "model": "game.userstats",
+    "pk": "378ffzozdqa2knjwr3fwxpet55rsgsg0",
+    "fields": {
+      "score": 0,
+      "last_played": "2023-06-23",
+      "last_game_state": "wait",
+      "last_number_tries": 4
+    }
+  },
+  {
+    "model": "game.userstats",
+    "pk": "9v2a2fcxxpkxbffsfwttyym5rmu03cfw",
+    "fields": {
+      "score": 0,
+      "last_played": "2023-06-23",
+      "last_game_state": "wait",
+      "last_number_tries": 4
+    }
+  }
+]

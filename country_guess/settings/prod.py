@@ -3,7 +3,7 @@ from country_guess.settings.base import *
 prod_env = Env()
 prod_env.read_env('.env.prod')
 
-DEBUG = prod_env.str('DJANGO_DEBUG', "False")
+DEBUG = prod_env.str('DJANGO_DEBUG', 'False')
 
 SECRET_KEY = prod_env.str('DJANGO_SECRET_KEY')
 
@@ -63,8 +63,3 @@ LOGGING = {
         },
     },
 }
-
-# TODO: add SSL certification and prepare for deployment
-# Security considerations
-# SECURE_SSL_REDIRECT = True
-# CSRF_COOKIE_SECURE = True

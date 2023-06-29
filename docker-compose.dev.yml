@@ -12,6 +12,7 @@ services:
         python manage.py flush --no-input
         python manage.py migrate --no-input
         python manage.py loaddata static/country_data.json
+        python manage.py clearsessions
         python manage.py reset_countries_dates
         python manage.py runserver 0.0.0.0:8000
     volumes:
