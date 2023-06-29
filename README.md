@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://github.com/[username]/[reponame]/blob/[branch]/random_logo.png?raw=true" alt="Logo" width="80" height="80">
+    <img src=static/random_logo.png alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Guess a Country</h3>
@@ -21,12 +21,12 @@
   </p>
 </div>
 
-<!-- TABLE OF CONTENTS 
+<!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-game">About the Game</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -39,15 +39,17 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+      <ul>
+        <li><a href="#changes-to-front-end">Changes to Front-end</a></li>
+        <li><a href="#changes-to-back-end">Changes to Back-end</a></li>
+        <li><a href="#running-inside-docker-compose">Running inside Docker-compose</a></li>
+      </ul>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
--->
-
 
 <!-- ABOUT THE PROJECT -->
 
@@ -149,13 +151,14 @@ npm install npm@latest -g
 Game flow is explained in [About the Game](#about-the-game). Here are some screenshots.
 
 <p float="left">
-  <img src="https://github.com/[username]/[reponame]/blob/[branch]/default.png?raw=true" alt="Logo" width="80" height="80">
-  <img src="https://github.com/[username]/[reponame]/blob/[branch]/suggestions.png?raw=true" alt="Logo" width="80" height="80">
-  <img src="https://github.com/[username]/[reponame]/blob/[branch]/incorrect_guess.png?raw=true" alt="Logo" width="80" height="80">
+  <img src=static/default.png.png alt="Logo" width="80" height="80">
+  <img src=static/suggestions.png alt="Logo" width="80" height="80">
+  <img src=static/incorrect_guess.png alt="Logo" width="80" height="80">
 </p>
 <p float="left">
-  <img src="https://github.com/[username]/[reponame]/blob/[branch]/invalid_guess.png?raw=true" alt="Logo" width="80" height="80">
-  <img src="https://github.com/[username]/[reponame]/blob/[branch]/no_guesses.png?raw=true" alt="Logo" width="80" height="80">
+  <img src=static/invalid_guess.png alt="Logo" width="80" height="80">
+  <img src=static/correct_guess.png alt="Logo" width="80" height="80">
+  <img src=static/no_guesses.png alt="Logo" width="80" height="80">
 </p>
 
 ### Changes to front-end
