@@ -7,6 +7,13 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -177,7 +184,7 @@ Webpack is installed to make a bundle. Configuration file is [`webpack.config.js
 
 To make changes in the back-end logic (views, routing), edit [`api`](api) contents.
 
-In that case, schema needs to be adjusted using `drf-spectacular` using the command
+In that case, schema needs to be adjusted with `drf-spectacular` using the command
 
 ```sh
 python manage.py spectacular --file schema.yml
@@ -278,6 +285,7 @@ Project Link: [https://github.com/natuspati/country-guess-game](https://github.c
 
 Thanks to these resources that helped me to build the game.
 
+* [Daniel and Audrey Greenfeld: Two Scoops of Django 3.x](https://www.feldroy.com/books/two-scoops-of-django-3-x)
 * [Modern JavaScript for Django Developers](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/)
 * [Michael Herman: Dockerizing Django with Postgres, Gunicorn, and Nginx](https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/)
 * [Lucas Miguel: PyTest with Django REST Framework: From Zero to Hero](https://dev.to/sherlockcodes/pytest-with-django-rest-framework-from-zero-to-hero-8c4)
@@ -290,15 +298,18 @@ Thanks to these resources that helped me to build the game.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-
+[contributors-shield]: https://img.shields.io/github/contributors/natuspati/country-guess-game.svg?style=for-the-badge
+[contributors-url]: https://github.com/natuspati/country-guess-game/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/natuspati/country-guess-game.svg?style=for-the-badge
+[forks-url]: https://github.com/natuspati/country-guess-game/network/members
+[stars-shield]: https://img.shields.io/github/stars/natuspati/country-guess-game.svg?style=for-the-badge
+[stars-url]: https://github.com/natuspati/country-guess-game/stargazers
+[issues-shield]: https://img.shields.io/github/issues/natuspati/country-guess-game.svg?style=for-the-badge
+[issues-url]: https://github.com/natuspati/country-guess-game/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/nurlat/
+[license-shield]: https://img.shields.io/github/license/natuspati/country-guess-game.svg?style=for-the-badge
+[license-url]: https://github.com/natuspati/country-guess-game/blob/main/LICENSE.txt
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 
@@ -335,8 +346,3 @@ Thanks to these resources that helped me to build the game.
 [Webpack.com]: https://img.shields.io/badge/Webpack-8DD6F9?style=for-the-badge&logo=webpack&logoColor=white
 
 [Webpack-url]: https://webpack.js.org/
-
-
-[default-img]: static/default.png
-
-[logo-img]: static/random_logo.png
