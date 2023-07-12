@@ -6,6 +6,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+<a name="readme-top"></a>
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Contributors][contributors-shield]][contributors-url]
@@ -17,7 +18,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/natuspati/country-guess-game">
     <img src=static/random_logo.png alt="Logo" width="200" >
   </a>
 
@@ -91,6 +92,7 @@ and [axios](https://www.npmjs.com/package/axios).
 * [![Webpack][Webpack.com]][Webpack-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![OpenAPIGenerator][OpenAPIGenerator.com]][OpenAPIGenerator-url]
+* [![Docker][Docker.com]][Docker-url]
 * [![PostgreSQL][PostgreSQL.com]][PostgreSQL-url]
 * [![Redis][Redis.com]][Redis-url]
 
@@ -251,7 +253,7 @@ docker volume prune
 - [x] Add tasks to update country data from [REST Countries](https://restcountries.com/) and reset `used_at` dates.
 - [x] Add docker-compose configurations
 - [ ] Complete behavior driven tests
-- [ ] Add job scheduling with Celey
+- [ ] Add job scheduling with Celery
 - [ ] Add distance indicator for incorrect guesses using a free Map API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
